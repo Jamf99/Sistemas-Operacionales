@@ -33,16 +33,28 @@ dir | fw -col 4
 
 #### 6. Cree una lista formateada de todos los archivos .exe del directorio C:\Windows. Debe mostrarse el nombre, la información de versión, y el tamaño del archivo. La propiedad de tamaño se llama length en Powershell, pero para mayor claridad, la columna se debe llamar Tamaño en su listado.
 
-- 
+
 
 #### 7. Importe el módulo NetAdapter (empleando el comando Import-Module NetAdapter). Empleando el cmdlet Get-NetAdapter, muestre una lista de adaptadores no virtuales (adaptadores cuya propiedad Virtual sea falsa. El valor lógico falso es representado por Powershell como $False).
 
+
+
 #### 8. Importe el módulo DnsClient. Empleando el cmdlet Get-DnsClientCache, muestre una lista de los registros A y AAAA que estén en el caché. Sugerencia: Si el caché está vacío, visite algunos sitios web para poblarlo.
+
+
 
 #### 9. Genere una lista de todos los archivos .exe del directorio C:\Windows\System32 que tengan más de 5 MB.
 
+
+
 #### 10. Muestre una lista de parches que sean actualizaciones de seguridad.
+
+
 
 #### 11. Muestre una lista de parches que hayan sido instalados por el usuario Administrador, que sean actualizaciones. Si no tiene ninguno, busque parches instalados por el usuario System. Note que algunos parches no tienen valor en el campo Installed By.
 
+
+
 #### 12. Genere una lista de todos los procesos que estén corriendo con el nombre Conhost o Svchost.
+
+
