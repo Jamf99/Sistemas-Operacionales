@@ -1,0 +1,3765 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200316135328
+Nombre de usuario: DESKTOP-7DD6IMI\User
+Usuario RunAs: DESKTOP-7DD6IMI\User
+Nombre de la configuración: 
+Máquina: DESKTOP-7DD6IMI (Microsoft Windows NT 10.0.17763.0)
+Aplicación host: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 7616
+PSVersion: 5.1.17763.1007
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1007
+BuildVersion: 10.0.17763.1007
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\User\Documents\PowerShell_transcript.DESKTOP-7DD6IMI.UgmrTjJk.20200316135328.txt
+PS C:\Windows\system32> get-wmiobject help
+get-wmiobject : Clase no válida "help"
+En línea: 1 Carácter: 1
++ get-wmiobject help
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [Get-WmiObject], ManagementException
+    + FullyQualifiedErrorId : GetWMIManagementException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+get-wmiobject : Clase no válida "help"
+En línea: 1 Carácter: 1
++ get-wmiobject help
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [Get-WmiObject], ManagementException
+    + FullyQualifiedErrorId : GetWMIManagementException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+
+PS C:\Windows\system32> help Get-WmiObject
+
+NOMBRE
+    Get-WmiObject
+
+SINOPSIS
+    Gets instances of WMI classes or information about the available classes.
+
+
+SINTAXIS
+    Get-WmiObject [-Class] <String> [[-Property] <String[]>] [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy |
+    Unchanged}] [-Authority <String>] [-ComputerName <String[]>] [-Credential <PSCredential>] [-DirectRead] [-EnableAllPrivileges] [-Filter <String>] [-Impersonation {Default |
+    Anonymous | Identify | Impersonate | Delegate}] [-Locale <String>] [-Namespace <String>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-WmiObject [[-Class] <String>] [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy | Unchanged}] [-Authority
+    <String>] [-ComputerName <String[]>] [-Credential <PSCredential>] [-EnableAllPrivileges] [-Impersonation {Default | Anonymous | Identify | Impersonate | Delegate}] [-List]
+    [-Locale <String>] [-Namespace <String>] [-Recurse] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-WmiObject [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy | Unchanged}] [-Authority <String>]
+    [-ComputerName <String[]>] [-Credential <PSCredential>] [-DirectRead] [-EnableAllPrivileges] [-Impersonation {Default | Anonymous | Identify | Impersonate | Delegate}] [-Locale
+    <String>] [-Namespace <String>] -Query <String> [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    Starting in Windows PowerShell 3.0, this cmdlet has been superseded by Get-CimInstancehttp://technet.microsoft.com/library/jj590758(v=wps.630).aspx.
+
+    The Get-WmiObject cmdlet gets instances of Windows Management Instrumentation (WMI) classes or information about the available WMI classes. To specify a remote computer, use
+    the ComputerName parameter. If the List parameter is specified, the cmdlet gets information about the WMI classes that are available in a specified namespace. If the Query
+    parameter is specified, the cmdlet runs a WMI query language (WQL) statement.
+
+    This cmdlet does not use Windows PowerShell remoting to perform remote operations. You can use the ComputerName parameter of the Get-WmiObject cmdlet even if your computer does
+    not meet the requirements for Windows PowerShellremoting or is not configured for remoting in Windows PowerShell.
+
+    Beginning in Windows PowerShell 3.0, the __Server property of the object that Get-WmiObject returns has a PSComputerName alias. This makes it easier to include the source
+    computer name in output and reports.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821595
+    Get-WSManInstance
+    Invoke-WSManAction
+    New-WSManInstance
+    Remove-WSManInstance
+    Invoke-WmiMethod
+    Remove-WmiObject
+    Set-WmiInstance
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-WmiObject -examples".
+    Para obtener más información, escriba: "get-help Get-WmiObject -detailed".
+    Para obtener información técnica, escriba: "get-help Get-WmiObject -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-WmiObject -online"
+
+
+PS C:\Windows\system32> help Get-WmiObject -full
+
+NOMBRE
+    Get-WmiObject
+
+SINOPSIS
+    Gets instances of WMI classes or information about the available classes.
+
+
+SINTAXIS
+    Get-WmiObject [-Class] <String> [[-Property] <String[]>] [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy |
+    Unchanged}] [-Authority <String>] [-ComputerName <String[]>] [-Credential <PSCredential>] [-DirectRead] [-EnableAllPrivileges] [-Filter <String>] [-Impersonation {Default |
+    Anonymous | Identify | Impersonate | Delegate}] [-Locale <String>] [-Namespace <String>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-WmiObject [[-Class] <String>] [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy | Unchanged}] [-Authority
+    <String>] [-ComputerName <String[]>] [-Credential <PSCredential>] [-EnableAllPrivileges] [-Impersonation {Default | Anonymous | Identify | Impersonate | Delegate}] [-List]
+    [-Locale <String>] [-Namespace <String>] [-Recurse] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-WmiObject [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy | Unchanged}] [-Authority <String>]
+    [-ComputerName <String[]>] [-Credential <PSCredential>] [-DirectRead] [-EnableAllPrivileges] [-Impersonation {Default | Anonymous | Identify | Impersonate | Delegate}] [-Locale
+    <String>] [-Namespace <String>] -Query <String> [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    Starting in Windows PowerShell 3.0, this cmdlet has been superseded by Get-CimInstancehttp://technet.microsoft.com/library/jj590758(v=wps.630).aspx.
+
+    The Get-WmiObject cmdlet gets instances of Windows Management Instrumentation (WMI) classes or information about the available WMI classes. To specify a remote computer, use
+    the ComputerName parameter. If the List parameter is specified, the cmdlet gets information about the WMI classes that are available in a specified namespace. If the Query
+    parameter is specified, the cmdlet runs a WMI query language (WQL) statement.
+
+    This cmdlet does not use Windows PowerShell remoting to perform remote operations. You can use the ComputerName parameter of the Get-WmiObject cmdlet even if your computer does
+    not meet the requirements for Windows PowerShellremoting or is not configured for remoting in Windows PowerShell.
+
+    Beginning in Windows PowerShell 3.0, the __Server property of the object that Get-WmiObject returns has a PSComputerName alias. This makes it easier to include the source
+    computer name in output and reports.
+
+
+PARÁMETROS
+    -Amended [<SwitchParameter>]
+        Indicates whether the objects that are returned from WMI should contain amended information. Typically, amended information is localizable information, such as object and
+        property descriptions, that is attached to the WMI object.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -AsJob [<SwitchParameter>]
+        Indicates that this cmdlet runs the command as a background job. Use this parameter to run commands that take a long time to finish.
+
+        When you use the AsJob parameter, the command returns an object that represents the background job and then displays the command prompt. You can continue to work in the
+        session while the job finishes. If Get-WmiObject is used on a remote computer, the job is created on the local computer, and the results from remote computers are
+        automatically returned to the local computer. To manage the job, use the cmdlets that contain the Job cmdlets. To get the job results, use the Receive-Job cmdlet.
+
+        To use this parameter with remote computers, the local and remote computers must be configured for remoting. Additionally, you must start Windows PowerShell by using the
+        Run as administrator option in Windows Vista and later versions of Windows. For more information, see about_Remote_Requirements.
+
+        For more information about Windows PowerShellbackground jobs, see about_Jobs and about_Remote_Jobs.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Authentication <AuthenticationLevel>
+        Specifies the authentication level to be used with the WMI connection. The acceptable values for this parameter are:
+
+        -1: Unchanged
+
+        0: Default
+
+        1: None (No authentication in performed.)
+
+        2: Connect (Authentication is performed only when the client establishes a relationship with the application.)
+
+        3: Call (Authentication is performed only at the beginning of each call when the application receives the request.)
+
+        4: Packet (Authentication is performed on all the data that is received from the client.)
+
+        5: PacketIntegrity (All the data that is transferred between the client  and the application is authenticated and verified.)
+
+        6: PacketPrivacy (The properties of the other authentication levels are used, and all the data is encrypted.)
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Authority <String>
+        Specifies the authority to use to authenticate the WMI connection. You can specify standard NTLM or Kerberos authentication. To use NTLM, set the authority setting to
+        ntlmdomain:<DomainName>, where <DomainName> identifies a valid NTLM domain name. To use Kerberos, specify kerberos:<DomainName>\<ServerName>". You cannot include the
+        authority setting when you connect to the local computer.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Class <String>
+        Specifies the name of a WMI class. When this parameter is used, the cmdlet retrieves instances of the WMI class.
+
+        ¿Requerido?                  true
+        ¿Posición?                   0
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -ComputerName <String[]>
+        Specifies the target computer for the management operation. Enter a fully qualified domain name (FQDN), a NetBIOS name, or an IP address. When the remote computer is in a
+        different domain than the local computer, the fully qualified domain name is required.
+
+        The default is the local computer. To specify the local computer, such as in a list of computer names, use "localhost", the local computer name, or a dot (.).
+
+        This parameter does not rely on Windows PowerShell remoting, which uses WS-Management. You can use the ComputerName parameter of Get-WmiObject even if your computer is not
+        configured to run WS-Management remote commands.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Credential <PSCredential>
+        Specifies a user account that has permission to perform this action. The default is the current user. Type a user name, such as User01, Domain01\User01, or
+        User@Contoso.com. Or, enter a PSCredential object, such as an object that is returned by the Get-Credential cmdlet. When you type a user name, you are prompted for a
+        password.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -DirectRead [<SwitchParameter>]
+        Specifies whether direct access to the WMI provider is requested for the specified class without any regard to its base class or to its derived classes.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -EnableAllPrivileges [<SwitchParameter>]
+        Indicates that this cmdlet enables all the privileges of the current user before the command makes the WMI call.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Filter <String>
+        Specifies a Where clause to use as a filter. Uses the syntax of the WMI Query Language (WQL).
+
+        Important: Do not include the Where keyword in the value of the parameter. For example, the following commands return only the logical disks that have a DeviceID of 'c:'
+        and services that have the name 'WinRM' without using the Where keyword.
+
+        `Get-WmiObject Win32_LogicalDisk -filter "DeviceID = 'c:' "`
+
+        `Get-WmiObject win32_service -filter "name='WinRM'"`
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Impersonation <ImpersonationLevel>
+        Specifies the impersonation level to use.
+
+        The acceptable values for this parameter are:
+
+        0: Default. Reads the local registry for the default impersonation level , which is usually set to "3: Impersonate".
+
+        1: Anonymous. Hides the credentials of the caller.
+
+        2: Identify. Allows objects to query the credentials of the caller.
+
+        3: Impersonate. Allows objects to use the credentials of the caller.
+
+        4: Delegate. Allows objects to permit other objects to use the credentials of the caller.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -List [<SwitchParameter>]
+        Gets the names of the WMI classes in the WMI repository namespace that is specified by the Namespace parameter.
+
+        If you specify the List parameter, but not the Namespace parameter, Get-WmiObject uses the Root\Cimv2 namespace by default. This cmdlet does not use the Default Namespace
+        registry entry in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WBEM\Scripting registry key to determine the default namespace.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Locale <String>
+        Specifies the preferred locale for WMI objects. Enter a value in MS_<LCID> format.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Namespace <String>
+        Specifies the WMI repository namespace where the specified WMI class is located when used with the Class parameter. When used with the List parameter, it specifies the
+        namespace from which to gather WMI class information.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Property <String[]>
+        Specifies the WMI class properties that this cmdlet gets information from. Enter the property names.
+
+        ¿Requerido?                  false
+        ¿Posición?                   1
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Query <String>
+        Specifies WMI Query Language (WQL) statement that this cmdlet runs. This parameter does not support event queries.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -Recurse [<SwitchParameter>]
+        Indicates that this cmdlet searches the current namespace and all other namespaces for the class name that is specified by the Class parameter.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         False
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    -ThrottleLimit <Int32>
+        Specifies the maximum number of WMI operations that can be executed simultaneously. This parameter is valid only when the AsJob parameter is used in the command.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         None
+        ¿Aceptar canalización?       False
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+    None
+        You cannot pipe input to this cmdlet.
+
+
+SALIDAS
+    PSObject or System.Management.Automation.RemotingJob
+        When you use the AsJob parameter, the cmdlet returns a job object. Otherwise, the object that Get-WmiObject returns depends on the value of the Class parameter.
+
+
+NOTAS
+
+
+        * To access WMI information on a remote computer, the cmdlet must run under an account that is a member of the local administrators group on the remote computer. Or, the
+        default access control on the WMI namespace of the remote repository can be changed to give access rights to other accounts.
+
+        Only some of the properties of each WMI class are displayed by default. The set of properties that is displayed for each WMI class is specified in the Types.ps1xml
+        configuration file. To get all properties of a WMI object, use the Get-Member or Format-List cmdlets.
+
+    Example 1: Get processes on the local computer
+
+    PS C:\>Get-WmiObject -Class Win32_Process
+
+    This command get the processes on the local computer.
+    Example 2: Gets services on a remote computer
+
+    PS C:\>Get-WmiObject -Class Win32_Service -ComputerName 127.0.0.1
+
+    This command gets the services on a remote computer. It uses the ComputerName parameter to specify the Internet Protocol (IP) address, 127.0.0.1. By default, the current
+    account must be a member of the Administrators group on the remote computer.
+    Example 3: Get WMI classes in the root or default namespace of the local computer
+
+    PS C:\>Get-WmiObject -Namespace "root/default" -List
+
+    This command gets the WMI classes in the root or default namespace of the local computer.
+    Example 4: Get a named service on multiple computers
+
+    PS C:\>Get-WmiObject -Query "select * from win32_service where name='WinRM'" -ComputerName Server01, Server02 | Format-List -Property PSComputerName, Name, ExitCode, Name,
+    ProcessID, StartMode, State, Status
+    PSComputerName : SERVER01
+    Name           : WinRM
+    ExitCode       : 0
+    Name           : WinRM
+    ProcessID      : 844
+    StartMode      : Auto
+    State          : Running
+    Status         : OK
+
+    PSComputerName : SERVER02
+    Name           : WinRM
+    ExitCode       : 0
+    Name           : WinRM
+    ProcessID      : 932
+    StartMode      : Auto
+    State          : Running
+    Status         : OK
+
+    This command gets the WinRM service on the computers that are specified by the value of the ComputerName parameter.
+
+    A pipeline operator (|) sends the output to the Format-List cmdlet, which adds the PSComputerName property to the default output. This makes it easy to see the computer on
+    which the service resides. PSComputerName is an alias of the __Server property of the objects that Get-WmiObject returns. This alias is introduced in Windows PowerShell 3.0.
+    Example 5: Stop a service on a remote computer
+
+    PS C:\>(Get-WmiObject -Class Win32_Service -Filter "name='WinRM'" -ComputerName Server01).StopService()
+
+    This command stops the WinRM service on the Server01 remote computer. The command uses a Get-WmiObject command to get the WinRM service on Server01. Then, it invokes the
+    StopService method of the Win32_Service WMI class on the object that the Get-WmiObject command returns.
+
+    This command is an alternative to using the Stop-Service cmdlet.
+    Example 6: Get the BIOS on the local computer
+
+    PS C:\>Get-WmiObject -Class Win32_Bios | Format-List -Property
+    Status                : OK
+    Name                  : Phoenix ROM BIOS PLUS Version 1.10 A05
+    Caption               : Phoenix ROM BIOS PLUS Version 1.10 A05
+    SMBIOSPresent         : True
+    __GENUS               : 2
+    __CLASS               : Win32_BIOS
+    __SUPERCLASS          : CIM_BIOSElement
+    __DYNASTY             : CIM_ManagedSystemElement
+    __RELPATH             : Win32_BIOS.Name="Phoenix ROM BIOS PLUS Version 1.10 â€¦
+    __PROPERTY_COUNT      : 27
+    __DERIVATION          : {CIM_BIOSElement, CIM_SoftwareElement, CIM_LogicalElement,â€¦
+    __SERVER              : Server01
+    __NAMESPACE           : root\cimv2
+    __PATH                : \\SERVER01\root\cimv2:Win32_BIOS.Name="Phoenix ROM BIOS
+     BiosCharacteristics   : {7, 9, 10, 11...}
+    BIOSVersion           : {DELL   - 15, Phoenix ROM BIOS PLUS Version 1.10 A05}
+    BuildNumber           :
+    CodeSet               :
+    CurrentLanguage       : en|US|iso8859-1
+    Description           : Phoenix ROM BIOS PLUS Version 1.10 A05
+    IdentificationCode    :
+    InstallableLanguages  : 1
+    InstallDate           :
+    LanguageEdition       :
+    ListOfLanguages       : {en|US|iso8859-1}
+    Manufacturer          : Dell Inc.
+    OtherTargetOS         :
+    PrimaryBIOS           : True
+    ReleaseDate           : 20101103000000.000000+000
+    SerialNumber          : 8VDM9P1
+    SMBIOSBIOSVersion     : A05
+    SMBIOSMajorVersion    : 2
+    SMBIOSMinorVersion    : 6SoftwareElementID     : Phoenix ROM BIOS PLUS Version 1.10 A05
+    SoftwareElementState  : 3
+    TargetOperatingSystem : 0
+    Version               : DELL   - 15
+    Scope                 : System.Management.ManagementScope
+    Path                  : \\SERVER01\root\cimv2:Win32_BIOS.Name="Phoenix ROM BIOS
+     Options               : System.Management.ObjectGetOptions
+    ClassPath             : \\JUNE-PC\root\cimv2:Win32_BIOS
+    Properties            : {BiosCharacteristics, BIOSVersion, BuildNumber, Caption...}
+    SystemProperties      : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+    Qualifiers            : {dynamic, Locale, provider, UUID}
+    Site                  :
+    Container             :
+
+    This command gets the BIOS on the local computer. The command uses a value of all (*) for the Property parameter of the Format-List cmdlet to display all properties of the
+    returned object in a list. By default, only a subset (defined in the Types.ps1xml configuration file) are displayed.
+    Example 7: Get the services on a remote computer
+
+    PS C:\>Get-WmiObject Win32_Service -Credential FABRIKAM\administrator -Computer Fabrikam
+
+    This command uses the Credential parameter of the Get-WmiObject cmdlet to get the services on a remote computer. The value of the Credential parameter is a user account name.
+    The user is prompted for a password.
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821595
+    Get-WSManInstance
+    Invoke-WSManAction
+    New-WSManInstance
+    Remove-WSManInstance
+    Invoke-WmiMethod
+    Remove-WmiObject
+    Set-WmiInstance
+
+
+
+PS C:\Windows\system32> help Get-WmiObject win32_quickfixengineering
+>> ErrorTerminación(help): "No se encuentra ningún parámetro de posición que acepte el argumento 'win32_quickfixengineering'."
+help : No se encuentra ningún parámetro de posición que acepte el argumento 'win32_quickfixengineering'.
+En línea: 1 Carácter: 1
++ help Get-WmiObject win32_quickfixengineering
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,help
+help : No se encuentra ningún parámetro de posición que acepte el argumento 'win32_quickfixengineering'.
+En línea: 1 Carácter: 1
++ help Get-WmiObject win32_quickfixengineering
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,help
+
+PS C:\Windows\system32> Get-WmiObject win32_quickfixengineering
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-7D... Update           KB4534131     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-7D... Update           KB4465065     NT AUTHORITY\SYSTEM  14/06/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4470788     NT AUTHORITY\SYSTEM  21/01/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4480056     NT AUTHORITY\SYSTEM  21/01/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4486153     NT AUTHORITY\SYSTEM  10/10/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4486161     NT AUTHORITY\SYSTEM  25/10/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4493510     NT AUTHORITY\SYSTEM  11/04/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4499728     NT AUTHORITY\SYSTEM  17/05/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4504369     NT AUTHORITY\SYSTEM  14/06/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4509095     NT AUTHORITY\SYSTEM  10/07/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4512577     NT AUTHORITY\SYSTEM  11/09/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4512937     NT AUTHORITY\SYSTEM  14/08/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4516115     NT AUTHORITY\SYSTEM  12/09/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4521862     NT AUTHORITY\SYSTEM  9/10/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4523204     NT AUTHORITY\SYSTEM  12/11/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4524244     NT AUTHORITY\SYSTEM  12/02/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4537759     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4539571     NT AUTHORITY\SYSTEM  15/03/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4538461     NT AUTHORITY\SYSTEM  16/03/2020 12:00:00 a. m.
+
+
+PS C:\Windows\system32> Get-WmiObject 
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Windows\system32> Get-WmiObject win32_service
+
+
+ExitCode  : 0
+Name      : AdobeARMservice
+ProcessId : 4372
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AJRouter
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : ALG
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AMD External Events Utility
+ProcessId : 2368
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppIDSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Appinfo
+ProcessId : 7672
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppReadiness
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AppXSvc
+ProcessId : 19024
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : aspnet_state
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AudioEndpointBuilder
+ProcessId : 2880
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Audiosrv
+ProcessId : 3228
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : avast
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : avastm
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AvastSecureBrowserElevationService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AVP20.0
+ProcessId : 4108
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AxInstSV
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : BDESVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : BEService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : BFE
+ProcessId : 4000
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BITS
+ProcessId : 13892
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BrokerInfrastructure
+ProcessId : 1132
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BTAGService
+ProcessId : 2428
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BthAvctpSvc
+ProcessId : 1572
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : bthserv
+ProcessId : 1564
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : camsvc
+ProcessId : 2388
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CDPSvc
+ProcessId : 3824
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : CertPropSvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ClickToRunSvc
+ProcessId : 4284
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ClipSVC
+ProcessId : 20656
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : COMSysApp
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : CoreMessagingRegistrar
+ProcessId : 3520
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CryptSvc
+ProcessId : 3536
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DcomLaunch
+ProcessId : 1132
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : defragsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DeviceAssociationService
+ProcessId : 2472
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : DeviceInstall
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DevQueryBroker
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Dhcp
+ProcessId : 1068
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : diagnosticshub.standardcollector.service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : diagsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DiagTrack
+ProcessId : 3444
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DisplayEnhancementService
+ProcessId : 1584
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : DmEnrollmentSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : dmwappushservice
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Dnscache
+ProcessId : 3564
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Dolby DAX2 API Service
+ProcessId : 7936
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DoSvc
+ProcessId : 8016
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : dot3svc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DPS
+ProcessId : 3528
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : DsmSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DsSvc
+ProcessId : 7060
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DusmSvc
+ProcessId : 3556
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Eaphost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : EFS
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : embeddedmode
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : EntAppSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : EpsonCustomerParticipation
+ProcessId : 3460
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EpsonScanSvc
+ProcessId : 4504
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ETDService
+ProcessId : 2356
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EventLog
+ProcessId : 1700
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EventSystem
+ProcessId : 2680
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Fax
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : fdPHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : FDResPub
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : fhsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : FLEXnet Licensing Service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : FontCache
+ProcessId : 2888
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : FontCache3.0.0.0
+ProcessId : 9156
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : FrameServer
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : GoogleChromeElevationService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gpsvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : GraphicsPerfSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gupdate
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : gupdatem
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : hidserv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : HvHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : icssvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : IKEEXT
+ProcessId : 3732
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : InstallService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : iphlpsvc
+ProcessId : 4408
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : IpxlatCfgSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : irmon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : KeyIso
+ProcessId : 836
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : klvssbridge64_20.0
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : kpm_launch_service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : KSDE4.0
+ProcessId : 7732
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : KtmRm
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : LanmanServer
+ProcessId : 4492
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LanmanWorkstation
+ProcessId : 2404
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : lfsvc
+ProcessId : 2264
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LicenseManager
+ProcessId : 5492
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : lltdsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : lmhosts
+ProcessId : 17424
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LSM
+ProcessId : 1292
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LxpSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : MapsBroker
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : mpssvc
+ProcessId : 4000
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : MSDTC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : MSiSCSI
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : msiserver
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NaturalAuthentication
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NcaSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NcbService
+ProcessId : 1476
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : NcdAutoSetup
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : Netlogon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : Netman
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : netprofm
+ProcessId : 2172
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NetSetupSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NetTcpPortSharing
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NgcCtnrSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NgcSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NlaSvc
+ProcessId : 1052
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : nsi
+ProcessId : 2028
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : ose64
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : p2pimsvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : p2psvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PcaSvc
+ProcessId : 11064
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : perceptionsimulation
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : PerfHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PhoneSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : pla
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PlugPlay
+ProcessId : 1108
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PNRPAutoReg
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : PNRPsvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : PolicyAgent
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Power
+ProcessId : 1132
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PrintNotify
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ProfSvc
+ProcessId : 1864
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : PushToInstall
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : QWAVE
+ProcessId : 7800
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : RasAuto
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RasMan
+ProcessId : 4632
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : RemoteAccess
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RemoteRegistry
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RetailDemo
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RmSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : Rockstar Service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : rpcapd
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RpcEptMapper
+ProcessId : 1244
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : RpcLocator
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RpcSs
+ProcessId : 1244
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : RtkAudioService
+ProcessId : 3392
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : RtkBtManServ
+ProcessId : 4188
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SamSs
+ProcessId : 836
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SCardSvr
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : ScDeviceEnum
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Schedule
+ProcessId : 2052
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SCPolicySvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SDRSVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : seclogon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SecurityHealthService
+ProcessId : 6308
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SEMgrSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SENS
+ProcessId : 2792
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensorDataService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensorService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensrSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SessionEnv
+ProcessId : 2528
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SgrmBroker
+ProcessId : 8052
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SharedAccess
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SharedRealitySvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ShellHWDetection
+ProcessId : 3848
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : shpamsvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : smphost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SmsRouter
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SNMPTRAP
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : spectrum
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Spooler
+ProcessId : 3904
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : sppsvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SQLWriter
+ProcessId : 4204
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SSDPSRV
+ProcessId : 2980
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : ssh-agent
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SstpSvc
+ProcessId : 4168
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : StateRepository
+ProcessId : 3300
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : stisvc
+ProcessId : 3476
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : StorSvc
+ProcessId : 9608
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : svsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : swprv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SysMain
+ProcessId : 2664
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SystemEventsBroker
+ProcessId : 1132
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : TabletInputService
+ProcessId : 4116
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : TapiSrv
+ProcessId : 4272
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : TeamViewer
+ProcessId : 4240
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : TermService
+ProcessId : 1440
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Themes
+ProcessId : 2700
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Windows\system32> Get-WmiObject win32_service | select name, startmode, state, status
+
+name                                     startmode state   status
+----                                     --------- -----   ------
+AdobeARMservice                          Auto      Running OK
+AJRouter                                 Manual    Stopped OK
+ALG                                      Manual    Stopped OK
+AMD External Events Utility              Auto      Running OK
+AppIDSvc                                 Manual    Stopped OK
+Appinfo                                  Manual    Running OK
+AppReadiness                             Manual    Stopped OK
+AppXSvc                                  Manual    Running OK
+aspnet_state                             Manual    Stopped OK
+AudioEndpointBuilder                     Auto      Running OK
+Audiosrv                                 Auto      Running OK
+avast                                    Auto      Stopped OK
+avastm                                   Manual    Stopped OK
+AvastSecureBrowserElevationService       Manual    Stopped OK
+AVP20.0                                  Auto      Running OK
+AxInstSV                                 Disabled  Stopped OK
+BDESVC                                   Manual    Stopped OK
+BEService                                Manual    Stopped OK
+BFE                                      Auto      Running OK
+BITS                                     Auto      Running OK
+BrokerInfrastructure                     Auto      Running OK
+BTAGService                              Manual    Running OK
+BthAvctpSvc                              Manual    Running OK
+bthserv                                  Manual    Running OK
+camsvc                                   Manual    Running OK
+CDPSvc                                   Auto      Running OK
+CertPropSvc                              Disabled  Stopped OK
+ClickToRunSvc                            Auto      Running OK
+ClipSVC                                  Manual    Running OK
+COMSysApp                                Manual    Stopped OK
+CoreMessagingRegistrar                   Auto      Running OK
+CryptSvc                                 Auto      Running OK
+DcomLaunch                               Auto      Running OK
+defragsvc                                Manual    Stopped OK
+DeviceAssociationService                 Auto      Running OK
+DeviceInstall                            Manual    Stopped OK
+DevQueryBroker                           Manual    Stopped OK
+Dhcp                                     Auto      Running OK
+diagnosticshub.standardcollector.service Manual    Stopped OK
+diagsvc                                  Manual    Stopped OK
+DiagTrack                                Auto      Running OK
+DisplayEnhancementService                Manual    Running OK
+DmEnrollmentSvc                          Manual    Stopped OK
+dmwappushservice                         Manual    Stopped OK
+Dnscache                                 Auto      Running OK
+Dolby DAX2 API Service                   Auto      Running OK
+DoSvc                                    Auto      Running OK
+dot3svc                                  Manual    Stopped OK
+DPS                                      Auto      Running OK
+DsmSvc                                   Manual    Stopped OK
+DsSvc                                    Manual    Running OK
+DusmSvc                                  Auto      Running OK
+Eaphost                                  Manual    Stopped OK
+EFS                                      Manual    Stopped OK
+embeddedmode                             Manual    Stopped OK
+EntAppSvc                                Manual    Stopped OK
+EpsonCustomerParticipation               Auto      Running OK
+EpsonScanSvc                             Auto      Running OK
+ETDService                               Auto      Running OK
+EventLog                                 Auto      Running OK
+EventSystem                              Auto      Running OK
+Fax                                      Manual    Stopped OK
+fdPHost                                  Manual    Stopped OK
+FDResPub                                 Manual    Stopped OK
+fhsvc                                    Manual    Stopped OK
+FLEXnet Licensing Service                Manual    Stopped OK
+FontCache                                Auto      Running OK
+FontCache3.0.0.0                         Manual    Running OK
+FrameServer                              Manual    Stopped OK
+GoogleChromeElevationService             Manual    Stopped OK
+gpsvc                                    Auto      Stopped OK
+GraphicsPerfSvc                          Manual    Stopped OK
+gupdate                                  Auto      Stopped OK
+gupdatem                                 Manual    Stopped OK
+hidserv                                  Manual    Stopped OK
+HvHost                                   Manual    Stopped OK
+icssvc                                   Manual    Stopped OK
+IKEEXT                                   Auto      Running OK
+InstallService                           Manual    Stopped OK
+iphlpsvc                                 Auto      Running OK
+IpxlatCfgSvc                             Manual    Stopped OK
+irmon                                    Manual    Stopped OK
+KeyIso                                   Manual    Running OK
+klvssbridge64_20.0                       Manual    Stopped OK
+kpm_launch_service                       Manual    Stopped OK
+KSDE4.0                                  Auto      Running OK
+KtmRm                                    Manual    Stopped OK
+LanmanServer                             Auto      Running OK
+LanmanWorkstation                        Auto      Running OK
+lfsvc                                    Manual    Running OK
+LicenseManager                           Manual    Running OK
+lltdsvc                                  Manual    Stopped OK
+lmhosts                                  Manual    Running OK
+LSM                                      Auto      Running OK
+LxpSvc                                   Manual    Stopped OK
+MapsBroker                               Auto      Stopped OK
+mpssvc                                   Auto      Running OK
+MSDTC                                    Manual    Stopped OK
+MSiSCSI                                  Disabled  Stopped OK
+msiserver                                Manual    Stopped OK
+NaturalAuthentication                    Manual    Stopped OK
+NcaSvc                                   Manual    Stopped OK
+NcbService                               Manual    Running OK
+NcdAutoSetup                             Manual    Stopped OK
+Netlogon                                 Manual    Stopped OK
+Netman                                   Manual    Stopped OK
+netprofm                                 Manual    Running OK
+NetSetupSvc                              Manual    Stopped OK
+NetTcpPortSharing                        Disabled  Stopped OK
+NgcCtnrSvc                               Manual    Stopped OK
+NgcSvc                                   Manual    Stopped OK
+NlaSvc                                   Auto      Running OK
+nsi                                      Auto      Running OK
+ose64                                    Manual    Stopped OK
+p2pimsvc                                 Disabled  Stopped OK
+p2psvc                                   Disabled  Stopped OK
+PcaSvc                                   Manual    Running OK
+perceptionsimulation                     Manual    Stopped OK
+PerfHost                                 Manual    Stopped OK
+PhoneSvc                                 Manual    Stopped OK
+pla                                      Manual    Stopped OK
+PlugPlay                                 Manual    Running OK
+PNRPAutoReg                              Manual    Stopped OK
+PNRPsvc                                  Disabled  Stopped OK
+PolicyAgent                              Manual    Stopped OK
+Power                                    Auto      Running OK
+PrintNotify                              Manual    Stopped OK
+ProfSvc                                  Auto      Running OK
+PushToInstall                            Manual    Stopped OK
+QWAVE                                    Manual    Running OK
+RasAuto                                  Manual    Stopped OK
+RasMan                                   Auto      Running OK
+RemoteAccess                             Disabled  Stopped OK
+RemoteRegistry                           Disabled  Stopped OK
+RetailDemo                               Manual    Stopped OK
+RmSvc                                    Manual    Stopped OK
+Rockstar Service                         Manual    Stopped OK
+rpcapd                                   Manual    Stopped OK
+RpcEptMapper                             Auto      Running OK
+RpcLocator                               Disabled  Stopped OK
+RpcSs                                    Auto      Running OK
+RtkAudioService                          Auto      Running OK
+RtkBtManServ                             Auto      Running OK
+SamSs                                    Auto      Running OK
+SCardSvr                                 Manual    Stopped OK
+ScDeviceEnum                             Manual    Stopped OK
+Schedule                                 Auto      Running OK
+SCPolicySvc                              Disabled  Stopped OK
+SDRSVC                                   Manual    Stopped OK
+seclogon                                 Manual    Stopped OK
+SecurityHealthService                    Manual    Running OK
+SEMgrSvc                                 Manual    Stopped OK
+SENS                                     Auto      Running OK
+SensorDataService                        Manual    Stopped OK
+SensorService                            Manual    Stopped OK
+SensrSvc                                 Manual    Stopped OK
+SessionEnv                               Manual    Running OK
+SgrmBroker                               Auto      Running OK
+SharedAccess                             Manual    Stopped OK
+SharedRealitySvc                         Manual    Stopped OK
+ShellHWDetection                         Auto      Running OK
+shpamsvc                                 Disabled  Stopped OK
+smphost                                  Manual    Stopped OK
+SmsRouter                                Manual    Stopped OK
+SNMPTRAP                                 Disabled  Stopped OK
+spectrum                                 Manual    Stopped OK
+Spooler                                  Auto      Running OK
+sppsvc                                   Auto      Stopped OK
+SQLWriter                                Auto      Running OK
+SSDPSRV                                  Manual    Running OK
+ssh-agent                                Disabled  Stopped OK
+SstpSvc                                  Manual    Running OK
+StateRepository                          Manual    Running OK
+stisvc                                   Auto      Running OK
+StorSvc                                  Manual    Running OK
+svsvc                                    Manual    Stopped OK
+swprv                                    Manual    Stopped OK
+SysMain                                  Auto      Running OK
+SystemEventsBroker                       Auto      Running OK
+TabletInputService                       Manual    Running OK
+TapiSrv                                  Manual    Running OK
+TeamViewer                               Auto      Running OK
+TermService                              Manual    Running OK
+Themes                                   Auto      Running OK
+TieringEngineService                     Manual    Stopped OK
+TimeBrokerSvc                            Manual    Running OK
+TokenBroker                              Manual    Running OK
+TrkWks                                   Auto      Running OK
+TrustedInstaller                         Manual    Stopped OK
+tzautoupdate                             Disabled  Stopped OK
+UmRdpService                             Manual    Stopped OK
+upnphost                                 Manual    Stopped OK
+UserManager                              Auto      Running OK
+UsoSvc                                   Auto      Running OK
+VacSvc                                   Manual    Stopped OK
+VaultSvc                                 Manual    Running OK
+vds                                      Manual    Stopped OK
+vmicguestinterface                       Manual    Stopped OK
+vmicheartbeat                            Manual    Stopped OK
+vmickvpexchange                          Manual    Stopped OK
+vmicrdv                                  Manual    Stopped OK
+vmicshutdown                             Manual    Stopped OK
+vmictimesync                             Manual    Stopped OK
+vmicvmsession                            Manual    Stopped OK
+vmicvss                                  Manual    Stopped OK
+VSS                                      Manual    Stopped OK
+VSStandardCollectorService150            Manual    Stopped OK
+W32Time                                  Manual    Running OK
+WaaSMedicSvc                             Manual    Stopped OK
+WalletService                            Manual    Stopped OK
+WarpJITSvc                               Manual    Stopped OK
+wbengine                                 Manual    Stopped OK
+WbioSrvc                                 Manual    Stopped OK
+WCAssistantService                       Auto      Running OK
+Wcmsvc                                   Auto      Running OK
+wcncsvc                                  Manual    Stopped OK
+WdiServiceHost                           Manual    Running OK
+WdiSystemHost                            Manual    Running OK
+WdNisSvc                                 Manual    Stopped OK
+WebClient                                Disabled  Stopped OK
+Wecsvc                                   Manual    Stopped OK
+WEPHOSTSVC                               Manual    Stopped OK
+wercplsupport                            Manual    Stopped OK
+WerSvc                                   Disabled  Stopped OK
+WFDSConMgrSvc                            Manual    Stopped OK
+WiaRpc                                   Manual    Stopped OK
+WinDefend                                Manual    Stopped OK
+WinHttpAutoProxySvc                      Manual    Running OK
+Winmgmt                                  Auto      Running OK
+WinRM                                    Disabled  Stopped OK
+wisvc                                    Manual    Stopped OK
+WlanSvc                                  Auto      Running OK
+wlidsvc                                  Manual    Stopped OK
+wlpasvc                                  Manual    Stopped OK
+WManSvc                                  Manual    Stopped OK
+wmiApSrv                                 Manual    Stopped OK
+WMPNetworkSvc                            Manual    Stopped OK
+workfolderssvc                           Manual    Stopped OK
+WpcMonSvc                                Manual    Stopped OK
+WPDBusEnum                               Manual    Stopped OK
+WpnService                               Auto      Running OK
+wscsvc                                   Auto      Running OK
+WSearch                                  Auto      Running OK
+wuauserv                                 Manual    Running OK
+WwanSvc                                  Manual    Stopped OK
+XblAuthManager                           Manual    Stopped OK
+XblGameSave                              Manual    Stopped OK
+XboxGipSvc                               Manual    Stopped OK
+XboxNetApiSvc                            Manual    Stopped OK
+BcastDVRUserService_4ac0ee1              Manual    Stopped OK
+BluetoothUserService_4ac0ee1             Manual    Stopped OK
+CaptureService_4ac0ee1                   Manual    Stopped OK
+cbdhsvc_4ac0ee1                          Manual    Running OK
+CDPUserSvc_4ac0ee1                       Auto      Running OK
+ConsentUxUserSvc_4ac0ee1                 Manual    Stopped OK
+DevicePickerUserSvc_4ac0ee1              Manual    Stopped OK
+DevicesFlowUserSvc_4ac0ee1               Manual    Stopped OK
+MessagingService_4ac0ee1                 Manual    Stopped OK
+OneSyncSvc_4ac0ee1                       Auto      Running OK
+PimIndexMaintenanceSvc_4ac0ee1           Manual    Running OK
+PrintWorkflowUserSvc_4ac0ee1             Manual    Stopped OK
+UnistoreSvc_4ac0ee1                      Manual    Running OK
+UserDataSvc_4ac0ee1                      Manual    Running OK
+WpnUserService_4ac0ee1                   Auto      Running OK
+
+
+PS C:\Windows\system32> ErrorTerminación(): "Se ha detenido la canalización."
+>> Get-WmiObject win32_service -list | select name
+
+Name
+----
+Win32_Service
+
+
+PS C:\Windows\system32> Get-WmiObject Win32_Service | select Name, Status, StartMode, CheckPoint, ??? | sort Name
+
+
+Name       : AdobeARMservice
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : AJRouter
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : ALG
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : AMD External Events Utility
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : AppIDSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Appinfo
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : AppReadiness
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : AppXSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : aspnet_state
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : AudioEndpointBuilder
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : Audiosrv
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : avast
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : avastm
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : AvastSecureBrowserElevationService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : AVP20.0
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : AxInstSV
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : BcastDVRUserService_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : BDESVC
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : BEService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : BFE
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : BITS
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : BluetoothUserService_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : BrokerInfrastructure
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : BTAGService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : BthAvctpSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : bthserv
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : camsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : CaptureService_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : cbdhsvc_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : CDPSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : CDPUserSvc_4ac0ee1
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : CertPropSvc
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : ClickToRunSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : ClipSVC
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : COMSysApp
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : ConsentUxUserSvc_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : CoreMessagingRegistrar
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : CryptSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : DcomLaunch
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : defragsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DeviceAssociationService
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : DeviceInstall
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DevicePickerUserSvc_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DevicesFlowUserSvc_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DevQueryBroker
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Dhcp
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : diagnosticshub.standardcollector.service
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : diagsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DiagTrack
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : DisplayEnhancementService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DmEnrollmentSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : dmwappushservice
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Dnscache
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : Dolby DAX2 API Service
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : DoSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : dot3svc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DPS
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : DsmSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DsSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : DusmSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : Eaphost
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : EFS
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : embeddedmode
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : EntAppSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : EpsonCustomerParticipation
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : EpsonScanSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : ETDService
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : EventLog
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : EventSystem
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : Fax
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : fdPHost
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : FDResPub
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : fhsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : FLEXnet Licensing Service
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : FontCache
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : FontCache3.0.0.0
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : FrameServer
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : GoogleChromeElevationService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : gpsvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : GraphicsPerfSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : gupdate
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : gupdatem
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : hidserv
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : HvHost
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : icssvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : IKEEXT
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : InstallService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : iphlpsvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : IpxlatCfgSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : irmon
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : KeyIso
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : klvssbridge64_20.0
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : kpm_launch_service
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : KSDE4.0
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : KtmRm
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : LanmanServer
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : LanmanWorkstation
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : lfsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : LicenseManager
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : lltdsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : lmhosts
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : LSM
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : LxpSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : MapsBroker
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : MessagingService_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : mpssvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : MSDTC
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : MSiSCSI
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : msiserver
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : NaturalAuthentication
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : NcaSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : NcbService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : NcdAutoSetup
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Netlogon
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Netman
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : netprofm
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : NetSetupSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : NetTcpPortSharing
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : NgcCtnrSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : NgcSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : NlaSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : nsi
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : OneSyncSvc_4ac0ee1
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : ose64
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : p2pimsvc
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : p2psvc
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : PcaSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : perceptionsimulation
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : PerfHost
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : PhoneSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : PimIndexMaintenanceSvc_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : pla
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : PlugPlay
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : PNRPAutoReg
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : PNRPsvc
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : PolicyAgent
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Power
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : PrintNotify
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : PrintWorkflowUserSvc_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : ProfSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : PushToInstall
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : QWAVE
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : RasAuto
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : RasMan
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : RemoteAccess
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : RemoteRegistry
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : RetailDemo
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : RmSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Rockstar Service
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : rpcapd
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : RpcEptMapper
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : RpcLocator
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : RpcSs
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : RtkAudioService
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : RtkBtManServ
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : SamSs
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : SCardSvr
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : ScDeviceEnum
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Schedule
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : SCPolicySvc
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : SDRSVC
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : seclogon
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SecurityHealthService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SEMgrSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SENS
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : SensorDataService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SensorService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SensrSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SessionEnv
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SgrmBroker
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : SharedAccess
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SharedRealitySvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : ShellHWDetection
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : shpamsvc
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : smphost
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SmsRouter
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SNMPTRAP
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : spectrum
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Spooler
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : sppsvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : SQLWriter
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : SSDPSRV
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : ssh-agent
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : SstpSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : StateRepository
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : stisvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : StorSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : svsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : swprv
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : SysMain
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : SystemEventsBroker
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : TabletInputService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : TapiSrv
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : TeamViewer
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : TermService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Themes
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : TieringEngineService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : TimeBrokerSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : TokenBroker
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : TrkWks
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : TrustedInstaller
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : tzautoupdate
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : UmRdpService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : UnistoreSvc_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : upnphost
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : UserDataSvc_4ac0ee1
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : UserManager
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : UsoSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : VacSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : VaultSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vds
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vmicguestinterface
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vmicheartbeat
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vmickvpexchange
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vmicrdv
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vmicshutdown
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vmictimesync
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vmicvmsession
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : vmicvss
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : VSS
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : VSStandardCollectorService150
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : W32Time
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WaaSMedicSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WalletService
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WarpJITSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : wbengine
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WbioSrvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WCAssistantService
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : Wcmsvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : wcncsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WdiServiceHost
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WdiSystemHost
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WdNisSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WebClient
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : Wecsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WEPHOSTSVC
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : wercplsupport
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WerSvc
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : WFDSConMgrSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WiaRpc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WinDefend
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WinHttpAutoProxySvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : Winmgmt
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : WinRM
+Status     : OK
+StartMode  : Disabled
+CheckPoint : 0
+???        :
+
+Name       : wisvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WlanSvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : wlidsvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : wlpasvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WManSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : wmiApSrv
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WMPNetworkSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : workfolderssvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WpcMonSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WPDBusEnum
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WpnService
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : WpnUserService_4ac0ee1
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : wscsvc
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : WSearch
+Status     : OK
+StartMode  : Auto
+CheckPoint : 0
+???        :
+
+Name       : wuauserv
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : WwanSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : XblAuthManager
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : XblGameSave
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : XboxGipSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+Name       : XboxNetApiSvc
+Status     : OK
+StartMode  : Manual
+CheckPoint : 0
+???        :
+
+
+
+PS C:\Windows\system32> ErrorTerminación(): "Se ha detenido la canalización."
+>> get-cimclass -Namespace root/securitycenter2 | where cimclassName -like "*product*"
+
+
+   NameSpace: ROOT/securitycenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+AntiVirusProduct                    {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+FirewallProduct                     {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+
+
+PS C:\Windows\system32> get-cimclass -Namespace root/securitycenter2 -ClassName antispywareproduct
+
+
+   NameSpace: ROOT/securitycenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+
+
+PS C:\Windows\system32> get-ciminstance -Namespace root/securitycenter2 -ClassName antispywareproduct
+
+
+displayName              : Kaspersky Free
+instanceGuid             : {B1D2E896-6D96-7460-F17A-838B9D00DD65}
+pathToSignedProductExe   : C:\Program Files (x86)\Kaspersky Lab\Kaspersky Free 20.0\wmiav.exe
+pathToSignedReportingExe : C:\Program Files (x86)\Kaspersky Lab\Kaspersky Free 20.0\avp.exe
+productState             : 266240
+timestamp                : Mon, 16 Mar 2020 01:34:49 GMT
+PSComputerName           :
+
+displayName              : Windows Defender
+instanceGuid             : {D68DDC3A-831F-4fae-9E44-DA132C1ACF46}
+pathToSignedProductExe   : windowsdefender://
+pathToSignedReportingExe : %ProgramFiles%\Windows Defender\MsMpeng.exe
+productState             : 393472
+timestamp                : Wed, 22 Jan 2020 19:54:46 GMT
+PSComputerName           :
+
+
+
+PS C:\Windows\system32> get-ciminstance -Namespace root/securitycenter2 -ClassName antivirusproduct
+
+
+displayName              : Windows Defender
+instanceGuid             : {D68DDC3A-831F-4fae-9E44-DA132C1ACF46}
+pathToSignedProductExe   : windowsdefender://
+pathToSignedReportingExe : %ProgramFiles%\Windows Defender\MsMpeng.exe
+productState             : 393472
+timestamp                : Wed, 22 Jan 2020 19:54:46 GMT
+PSComputerName           :
+
+displayName              : Kaspersky Free
+instanceGuid             : {0AB30972-4BAC-7BEE-CBCA-B8F9E68797D8}
+pathToSignedProductExe   : C:\Program Files (x86)\Kaspersky Lab\Kaspersky Free 20.0\wmiav.exe
+pathToSignedReportingExe : C:\Program Files (x86)\Kaspersky Lab\Kaspersky Free 20.0\avp.exe
+productState             : 266240
+timestamp                : Mon, 16 Mar 2020 01:34:49 GMT
+PSComputerName           :
+
+
+
+PS C:\Windows\system32> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200316142355
+**********************
