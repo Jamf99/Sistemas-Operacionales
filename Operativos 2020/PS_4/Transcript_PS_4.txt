@@ -4930,6 +4930,976 @@ pspdata                                       Python27                          
 Windows                                       xampp
 
 
+PS C:\Windows\system32> dir -path "C:\Windows\*.exe" | fl name,VersionInfo,@{n='Tamano';e={$_.Length}}
+
+
+Name        : bfsvc.exe
+VersionInfo : File:             C:\Windows\bfsvc.exe
+              InternalName:     bfsvc.exe
+              OriginalFilename: bfsvc.exe.mui
+              FileVersion:      10.0.17763.1091 (WinBuild.160101.0800)
+              FileDescription:  Utilidad de servicio de actualización del archivo de arranque
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17763.1091
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamano      : 78848
+
+Name        : explorer.exe
+VersionInfo : File:             C:\Windows\explorer.exe
+              InternalName:     explorer
+              OriginalFilename: EXPLORER.EXE.MUI
+              FileVersion:      10.0.17763.1091 (WinBuild.160101.0800)
+              FileDescription:  Explorador de Windows
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17763.1091
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamano      : 4417008
+
+Name        : HelpPane.exe
+VersionInfo : File:             C:\Windows\HelpPane.exe
+              InternalName:     HelpPane.exe
+              OriginalFilename: HelpPane.exe.mui
+              FileVersion:      10.0.17763.1091 (WinBuild.160101.0800)
+              FileDescription:  Ayuda y soporte técnico de Microsoft
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17763.1091
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamano      : 1071616
+
+Name        : hh.exe
+VersionInfo : File:             C:\Windows\hh.exe
+              InternalName:     HH 1.41
+              OriginalFilename: HH.exe.mui
+              FileVersion:      10.0.17763.1091 (WinBuild.160101.0800)
+              FileDescription:  Archivo ejecutable de ayuda HTML de Microsoft®
+              Product:          Ayuda de HTML
+              ProductVersion:   10.0.17763.1091
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamano      : 18432
+
+Name        : notepad.exe
+VersionInfo : File:             C:\Windows\notepad.exe
+              InternalName:     Notepad
+              OriginalFilename: NOTEPAD.EXE.MUI
+              FileVersion:      10.0.17763.1 (WinBuild.160101.0800)
+              FileDescription:  Bloc de notas
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17763.1
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamano      : 254464
+
+Name        : py.exe
+VersionInfo : File:             C:\Windows\py.exe
+              InternalName:     Python Launcher
+              OriginalFilename: py.exe
+              FileVersion:      3.8.0
+              FileDescription:  Python
+              Product:          Python
+              ProductVersion:   3.8.0
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Independiente del idioma
+
+Tamano      : 909896
+
+Name        : pyw.exe
+VersionInfo : File:             C:\Windows\pyw.exe
+              InternalName:     Python Launcher
+              OriginalFilename: py.exe
+              FileVersion:      3.8.0
+              FileDescription:  Python
+              Product:          Python
+              ProductVersion:   3.8.0
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Independiente del idioma
+
+Tamano      : 909896
+
+Name        : regedit.exe
+VersionInfo : File:             C:\Windows\regedit.exe
+              InternalName:     REGEDIT
+              OriginalFilename: REGEDIT.EXE.MUI
+              FileVersion:      10.0.17763.1091 (WinBuild.160101.0800)
+              FileDescription:  Editor del Registro
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17763.1091
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamano      : 358400
+
+Name        : RtkBtManServ.exe
+VersionInfo : File:             C:\Windows\RtkBtManServ.exe
+              InternalName:
+              OriginalFilename:
+              FileVersion:      1.1.17.1
+              FileDescription:  Realtek Bluetooth BTDevManager Service Application
+              Product:          Bluetooth Software
+              ProductVersion:   1.1.17.1
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Chino (simplificado, China)
+
+Tamano      : 687080
+
+Name        : splwow64.exe
+VersionInfo : File:             C:\Windows\splwow64.exe
+              InternalName:     splwow64.exe
+              OriginalFilename: splwow64.exe
+              FileVersion:      10.0.17763.864 (WinBuild.160101.0800)
+              FileDescription:  Print driver host for applications
+              Product:          Microsoft® Windows® Operating System
+              ProductVersion:   10.0.17763.864
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Inglés (Estados Unidos)
+
+Tamano      : 132608
+
+Name        : winhlp32.exe
+VersionInfo : File:             C:\Windows\winhlp32.exe
+              InternalName:     WINHSTB
+              OriginalFilename: WINHLP32.EXE.MUI
+              FileVersion:      10.0.17763.1091 (WinBuild.160101.0800)
+              FileDescription:  Código auxiliar de Windows Winhlp32
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.17763.1091
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+Tamano      : 11776
+
+Name        : write.exe
+VersionInfo : File:             C:\Windows\write.exe
+              InternalName:     write
+              OriginalFilename: write
+              FileVersion:      10.0.17763.1 (WinBuild.160101.0800)
+              FileDescription:  Windows Write
+              Product:          Microsoft® Windows® Operating System
+              ProductVersion:   10.0.17763.1
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Inglés (Estados Unidos)
+
+Tamano      : 11264
+
+
+
+PS C:\Windows\system32> Import-Module NetAdapter
+PS C:\Windows\system32> help get-adapter
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Windows\system32> help Get-NetAdapter
+
+NOMBRE
+    Get-NetAdapter
+
+SINOPSIS
+    Gets the basic network adapter properties.
+
+
+SINTAXIS
+    Get-NetAdapter [[-Name] <String[]>] [-AsJob] [-CimSession <CimSession[]>] [-IncludeHidden] [-Physical] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-NetAdapter [-AsJob] [-CimSession <CimSession[]>] [-IncludeHidden] [-Physical] [-ThrottleLimit <Int32>] -InterfaceDescription <String[]> [<CommonParameters>]
+
+    Get-NetAdapter [-AsJob] [-CimSession <CimSession[]>] [-IncludeHidden] [-Physical] [-ThrottleLimit <Int32>] -InterfaceIndex <UInt32[]> [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-NetAdapter cmdlet gets the basic network adapter properties. By default only visible adapters are returned. To see the common network adapter properties, pipe the
+    output into the Format-List cmdlet. To see all the properties, pipe the output to the Format-List cmdlet with the Property parameter specified as the wildcard character "*".
+    This cmdlet supports multiple views. The default view is as a table. To see more information regarding various network adapter identifiers use the names view using the
+    Format-Table cmdlet with the View parameter specified as name. To see more information regarding the miniport, device driver, such as driver date or version use the driver view
+    using the Format-Table cmdlet with the View parameter specified as driver.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version:
+    Disable-NetAdapter
+    Enable-NetAdapter
+    Rename-NetAdapter
+    Restart-NetAdapter
+    Set-NetAdapter
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-NetAdapter -examples".
+    Para obtener más información, escriba: "get-help Get-NetAdapter -detailed".
+    Para obtener información técnica, escriba: "get-help Get-NetAdapter -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-NetAdapter -online"
+
+
+PS C:\Windows\system32> Get-NetAdapter
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Ethernet                  Realtek PCIe GbE Family Controller           22 Disconnected 8C-16-45-49-E5-8A          0 bps
+Conexión de red Bluetooth Bluetooth Device (Personal Area Netw...      19 Disconnected B0-FC-36-4D-AE-40         3 Mbps
+Ethernet 2                Kaspersky Security Data Escort Adapter       11 Disconnected 00-FF-62-54-6C-7F       100 Mbps
+Ethernet 4                Kaspersky Security Data Escort Ada...#2      10 Disconnected 00-FF-5F-18-DD-3D       100 Mbps
+Ethernet 3                TAP-Windows Adapter V9                        7 Disconnected 00-FF-43-60-52-09       100 Mbps
+Wi-Fi                     Realtek 8821AE Wireless LAN 802.11ac...       2 Up           B0-FC-36-4D-AE-3F      57.8 Mbps
+
+
+PS C:\Windows\system32> Get-NetAdapter | ft -Wrap
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Ethernet                  Realtek PCIe GbE Family Controller           22 Disconnected 8C-16-45-49-E5-8A          0 bps
+Conexión de red Bluetooth Bluetooth Device (Personal Area              19 Disconnected B0-FC-36-4D-AE-40         3 Mbps
+                          Network)
+Ethernet 2                Kaspersky Security Data Escort Adapter       11 Disconnected 00-FF-62-54-6C-7F       100 Mbps
+Ethernet 4                Kaspersky Security Data Escort Ada...#2      10 Disconnected 00-FF-5F-18-DD-3D       100 Mbps
+Ethernet 3                TAP-Windows Adapter V9                        7 Disconnected 00-FF-43-60-52-09       100 Mbps
+Wi-Fi                     Realtek 8821AE Wireless LAN 802.11ac          2 Up           B0-FC-36-4D-AE-3F      43.3 Mbps
+                          PCI-E NIC
+
+
+PS C:\Windows\system32> Get-NetAdapter | ft -Wrap -autosize
+
+Name                      InterfaceDescription                           ifIndex Status       MacAddress        LinkSpeed
+----                      --------------------                           ------- ------       ----------        ---------
+Ethernet                  Realtek PCIe GbE Family Controller                  22 Disconnected 8C-16-45-49-E5-8A     0 bps
+Conexión de red Bluetooth Bluetooth Device (Personal Area Network)            19 Disconnected B0-FC-36-4D-AE-40    3 Mbps
+Ethernet 2                Kaspersky Security Data Escort Adapter              11 Disconnected 00-FF-62-54-6C-7F  100 Mbps
+Ethernet 4                Kaspersky Security Data Escort Ada...#2             10 Disconnected 00-FF-5F-18-DD-3D  100 Mbps
+Ethernet 3                TAP-Windows Adapter V9                               7 Disconnected 00-FF-43-60-52-09  100 Mbps
+Wi-Fi                     Realtek 8821AE Wireless LAN 802.11ac PCI-E NIC       2 Up           B0-FC-36-4D-AE-3F 57.8 Mbps
+
+
+PS C:\Windows\system32> Get-NetAdapter | where {$_.Virtual -eq $false}
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Ethernet                  Realtek PCIe GbE Family Controller           22 Disconnected 8C-16-45-49-E5-8A          0 bps
+Ethernet 3                TAP-Windows Adapter V9                        7 Disconnected 00-FF-43-60-52-09       100 Mbps
+Wi-Fi                     Realtek 8821AE Wireless LAN 802.11ac...       2 Up           B0-FC-36-4D-AE-3F      57.8 Mbps
+
+
+PS C:\Windows\system32> import-module dnsclient
+PS C:\Windows\system32> help get-dnsclientcache
+
+NOMBRE
+    Get-DnsClientCache
+
+SINOPSIS
+    Retrieves the contents of the DNS client cache.
+
+
+SINTAXIS
+    Get-DnsClientCache [[-Entry] <String[]>] [-CimSession <CimSession[]>] [-Data <String[]>] [-DataLength <UInt16[]>] [-Name <String[]>] [-Section <Section[]>] [-Status <Status[]>]
+    [-ThrottleLimit <Int32>] [-TimeToLive <UInt32[]>] [-Type <Type[]>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-DnsClientCache cmdlet retrieves the contents of the local DNS client cache.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version:
+    Clear-DnsClientCache
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-DnsClientCache -examples".
+    Para obtener más información, escriba: "get-help Get-DnsClientCache -detailed".
+    Para obtener información técnica, escriba: "get-help Get-DnsClientCache -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-DnsClientCache -online"
+
+
+PS C:\Windows\system32> help get-dnsclientcache -full
+
+NOMBRE
+    Get-DnsClientCache
+
+SINOPSIS
+    Retrieves the contents of the DNS client cache.
+
+
+SINTAXIS
+    Get-DnsClientCache [[-Entry] <String[]>] [-CimSession <CimSession[]>] [-Data <String[]>] [-DataLength <UInt16[]>] [-Name <String[]>] [-Section <Section[]>] [-Status <Status[]>]
+    [-ThrottleLimit <Int32>] [-TimeToLive <UInt32[]>] [-Type <Type[]>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-DnsClientCache cmdlet retrieves the contents of the local DNS client cache.
+
+
+PARÁMETROS
+    -CimSession [<CimSession[]>]
+        Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The
+        default is the current session on the local computer.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -Data [<String[]>]
+        Specifies the record data.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -DataLength [<UInt16[]>]
+        Specifies the record data length.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -Entry [<String[]>]
+        Specifies the cache entry name.
+
+        ¿Requerido?                  false
+        ¿Posición?                   1
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -Name [<String[]>]
+        Specifies the record name.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -Section [<Section[]>]
+        Specifies the record section. The acceptable values for this parameter are:
+
+        -- Answer
+        -- Authority
+        -- Additional
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -Status [<Status[]>]
+        Specifies the record status. The acceptable values for this parameter are:
+
+        -- Success
+        -- NotExist
+        -- NoRecords
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -ThrottleLimit [<Int32>]
+        Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows
+        PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the
+        current cmdlet, not to the session or to the computer.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -TimeToLive [<UInt32[]>]
+        Specifies the record time-to-live, in seconds.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -Type [<Type[]>]
+        Specifies the record type. The acceptable values for this parameter are:
+
+        -- A
+        -- NS
+        -- CNAME
+        -- SOA
+        -- PTR
+        -- MX
+        -- AAAA
+        -- SRV
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+        None
+
+
+
+
+SALIDAS
+        Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_DnsClientCache
+
+        The Microsoft.Management.Infrastructure.CimInstance object is a wrapper class that displays Windows Management Instrumentation (WMI) objects. The path after the pound sign
+        (#) provides the namespace and class name for the underlying WMI object.
+
+        The MSFT_DnsClientCache object contains all of the entries in the DNS client cache.
+
+
+    Example 1: Get the DNS client cache
+
+    PS C:\>Get-DnsClientCache
+
+    This example gets the contents of the DNS client cache.
+
+
+
+VÍNCULOS RELACIONADOS
+    Online Version:
+    Clear-DnsClientCache
+
+
+
+PS C:\Windows\system32> help get-dnsclientcache -Examples
+
+NOMBRE
+    Get-DnsClientCache
+
+SINOPSIS
+    Retrieves the contents of the DNS client cache.
+
+
+    Example 1: Get the DNS client cache
+
+    PS C:\>Get-DnsClientCache
+
+    This example gets the contents of the DNS client cache.
+
+
+
+
+
+PS C:\Windows\system32> get-dnsclientcache -Type A,AAAA
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+merchandise.opera-api.com merchandise.opera-api.com AAAA   Success   Answer    1538     16 2001:4c28:4000:722:185:26:182:111
+merchandise.opera-api.com merchandise.opera-api.com AAAA   Success   Answer    1538     16 2001:4c28:4000:722:185:26:182:112
+merchandise.opera-api.com merchandise.opera-api.com A      Success   Answer    1536      4 185.26.182.111
+merchandise.opera-api.com merchandise.opera-api.com A      Success   Answer    1536      4 185.26.182.112
+update.iobit.com          gs1.wpc.edgecastcdn.net   A      Success   Answer    2050      4 72.21.81.253
+www.devblinders.com       devblinders.com           A      Success   Answer     849      4 37.59.226.65
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1285     16 2001:4de0:ac19::1:b:2a
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1285     16 2001:4de0:ac19::1:b:1b
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1285     16 2001:4de0:ac19::1:b:1a
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1285     16 2001:4de0:ac19::1:b:2b
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1285     16 2001:4de0:ac19::1:b:3a
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1285     16 2001:4de0:ac19::1:b:3b
+ocsp.sectigo.com          ocsp.sectigo.com          A      Success   Answer    1285      4 151.139.128.14
+az700632.vo.msecnd.net    cs9.wpc.v0cdn.net         AAAA   Success   Answer    1649     16 2606:2800:11f:17a5:191a:18d5:537:22f9
+az700632.vo.msecnd.net    cs9.wpc.v0cdn.net         A      Success   Answer    1376      4 72.21.81.200
+lol.secure.dyn.riotcdn... a17.d.akamai.net          A      Success   Answer      20      4 181.49.123.154
+lol.secure.dyn.riotcdn... a17.d.akamai.net          A      Success   Answer      20      4 181.49.123.217
+ecoinventos.com           ecoinventos.com           A      Success   Answer    6568      4 155.133.195.25
+prod.la1.lol.riotgames... prod.la1.lol.riotgames... A      Success   Answer    9929      4 66.151.33.24
+www.cd4o.com              gs1.wpc.edgecastcdn.net   A      Success   Answer    2050      4 72.21.81.253
+www.cd4o.com              gs1.wpc.edgecastcdn.net   A      Success   Answer    2050      4 72.21.81.253
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer      42      4 104.16.0.92
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer      42      4 104.16.1.92
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer      42      4 104.16.2.92
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer      42      4 104.16.3.92
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer      42      4 104.16.31.91
+www.icesi.edu.co          webcache.icesi.edu.co     A      Success   Answer    9804      4 200.3.192.46
+speeddials.opera.com      us.speeddials.opera.com   A      Success   Answer       4      4 107.167.110.216
+speeddials.opera.com      us.speeddials.opera.com   A      Success   Answer       4      4 107.167.110.211
+az667904.vo.msecnd.net    cs9.wpc.v0cdn.net         AAAA   Success   Answer     130     16 2606:2800:11f:17a5:191a:18d5:537:22f9
+az667904.vo.msecnd.net    cs9.wpc.v0cdn.net         A      Success   Answer     129      4 72.21.81.200
+insights-collector.new... insights-collector.new... A      Success   Answer    9910      4 162.247.242.30
+dc1.ksn.kaspersky-labs... ksn-dc1.geoksn.kaspers... A      Success   Answer     825      4 38.113.165.147
+dc1.ksn.kaspersky-labs... ksn-dc1.geoksn.kaspers... A      Success   Answer     825      4 66.110.49.37
+array507.prod.do.dsp.m... array507.prod.do.dsp.m... A      Success   Answer    2275      4 40.79.67.176
+array505.prod.do.dsp.m... array505.prod.do.dsp.m... A      Success   Answer    1034      4 40.79.65.123
+array508.prod.do.dsp.m... array508.prod.do.dsp.m... A      Success   Answer    1417      4 40.79.65.78
+github.githubassets.com   github.githubassets.com   A      Success   Answer    2544      4 185.199.109.154
+github.githubassets.com   github.githubassets.com   A      Success   Answer    2544      4 185.199.108.154
+github.githubassets.com   github.githubassets.com   A      Success   Answer    2544      4 185.199.111.154
+github.githubassets.com   github.githubassets.com   A      Success   Answer    2544      4 185.199.110.154
+
+
+PS C:\Windows\system32> ErrorTerminación(): "Se ha detenido la canalización."
+>> get-dnsclientcache | ft -property A, AAAA
+
+A AAAA
+- ----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Windows\system32> get-dnsclientcache -Type A,AAAA -wrap
+>> ErrorTerminación(Get-DnsClientCache): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'wrap'."
+Get-DnsClientCache : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'wrap'.
+En línea: 1 Carácter: 33
++ get-dnsclientcache -Type A,AAAA -wrap
++                                 ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-DnsClientCache], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Get-DnsClientCache
+Get-DnsClientCache : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'wrap'.
+En línea: 1 Carácter: 33
++ get-dnsclientcache -Type A,AAAA -wrap
++                                 ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-DnsClientCache], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Get-DnsClientCache
+
+PS C:\Windows\system32> get-dnsclientcache -Type A,AAAA
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+merchandise.opera-api.com merchandise.opera-api.com AAAA   Success   Answer    1443     16 2001:4c28:4000:722:185:26:182:111
+merchandise.opera-api.com merchandise.opera-api.com AAAA   Success   Answer    1443     16 2001:4c28:4000:722:185:26:182:112
+merchandise.opera-api.com merchandise.opera-api.com A      Success   Answer    1441      4 185.26.182.111
+merchandise.opera-api.com merchandise.opera-api.com A      Success   Answer    1441      4 185.26.182.112
+update.iobit.com          gs1.wpc.edgecastcdn.net   A      Success   Answer    1955      4 72.21.81.253
+www.devblinders.com       devblinders.com           A      Success   Answer     754      4 37.59.226.65
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1190     16 2001:4de0:ac19::1:b:2a
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1190     16 2001:4de0:ac19::1:b:1b
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1190     16 2001:4de0:ac19::1:b:1a
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1190     16 2001:4de0:ac19::1:b:2b
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1190     16 2001:4de0:ac19::1:b:3a
+ocsp.sectigo.com          ocsp.sectigo.com          AAAA   Success   Answer    1190     16 2001:4de0:ac19::1:b:3b
+ocsp.sectigo.com          ocsp.sectigo.com          A      Success   Answer    1190      4 151.139.128.14
+az700632.vo.msecnd.net    cs9.wpc.v0cdn.net         AAAA   Success   Answer    1554     16 2606:2800:11f:17a5:191a:18d5:537:22f9
+az700632.vo.msecnd.net    cs9.wpc.v0cdn.net         A      Success   Answer    1281      4 72.21.81.200
+ecoinventos.com           ecoinventos.com           A      Success   Answer    6473      4 155.133.195.25
+prod.la1.lol.riotgames... prod.la1.lol.riotgames... A      Success   Answer    9834      4 66.151.33.24
+www.cd4o.com              gs1.wpc.edgecastcdn.net   A      Success   Answer    1955      4 72.21.81.253
+www.cd4o.com              gs1.wpc.edgecastcdn.net   A      Success   Answer    1955      4 72.21.81.253
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer     217      4 104.16.2.92
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer     217      4 104.16.3.92
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer     217      4 104.16.0.92
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer     217      4 104.16.31.91
+lan.ledge.leagueoflege... lan.ledge.leagueoflege... A      Success   Answer     217      4 104.16.1.92
+www.icesi.edu.co          webcache.icesi.edu.co     A      Success   Answer    9709      4 200.3.192.46
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... A      Success   Answer      12      4 8.253.209.120
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... A      Success   Answer      12      4 8.253.135.121
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... A      Success   Answer      12      4 8.253.135.112
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... A      Success   Answer      12      4 8.253.183.120
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... A      Success   Answer      12      4 8.253.135.105
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... AAAA   Success   Answer      22     16 2001:1900:2316:ef05::1fe
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... AAAA   Success   Answer      22     16 2001:1900:2316:ef09::1fe
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... AAAA   Success   Answer      22     16 2001:1900:2316:ee0c::1fe
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... AAAA   Success   Answer      22     16 2001:1900:2316:ef07::1fe
+dl.delivery.mp.microso... 3.dl.delivery.mp.micro... AAAA   Success   Answer      22     16 2001:1900:2316:ef0c::1fe
+speeddials.opera.com      us.speeddials.opera.com   A      Success   Answer      20      4 107.167.110.211
+speeddials.opera.com      us.speeddials.opera.com   A      Success   Answer      20      4 107.167.110.216
+az667904.vo.msecnd.net    cs9.wpc.v0cdn.net         AAAA   Success   Answer      35     16 2606:2800:11f:17a5:191a:18d5:537:22f9
+az667904.vo.msecnd.net    cs9.wpc.v0cdn.net         A      Success   Answer      34      4 72.21.81.200
+insights-collector.new... insights-collector.new... A      Success   Answer    9815      4 162.247.242.30
+dc1.ksn.kaspersky-labs... ksn-dc1.geoksn.kaspers... A      Success   Answer     730      4 38.113.165.147
+dc1.ksn.kaspersky-labs... ksn-dc1.geoksn.kaspers... A      Success   Answer     730      4 66.110.49.37
+array507.prod.do.dsp.m... array507.prod.do.dsp.m... A      Success   Answer    2180      4 40.79.67.176
+array505.prod.do.dsp.m... array505.prod.do.dsp.m... A      Success   Answer     939      4 40.79.65.123
+array508.prod.do.dsp.m... array508.prod.do.dsp.m... A      Success   Answer    1322      4 40.79.65.78
+github.githubassets.com   github.githubassets.com   A      Success   Answer    2449      4 185.199.109.154
+github.githubassets.com   github.githubassets.com   A      Success   Answer    2449      4 185.199.108.154
+github.githubassets.com   github.githubassets.com   A      Success   Answer    2449      4 185.199.111.154
+github.githubassets.com   github.githubassets.com   A      Success   Answer    2449      4 185.199.110.154
+
+
+PS C:\Windows\system32> clear
+PS C:\Windows\system32> dir -path "C:\Windows\System32\*.exe" | fl where {$_.Length -gt 5MB}
+>> ErrorTerminación(Format-List): "No se encuentra ningún parámetro de posición que acepte el argumento '$_.Length -gt 5MB'."
+Format-List : No se encuentra ningún parámetro de posición que acepte el argumento '$_.Length -gt 5MB'.
+En línea: 1 Carácter: 41
++ dir -path "C:\Windows\System32\*.exe" | fl where {$_.Length -gt 5MB}
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-List], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.FormatListCommand
+Format-List : No se encuentra ningún parámetro de posición que acepte el argumento '$_.Length -gt 5MB'.
+En línea: 1 Carácter: 41
++ dir -path "C:\Windows\System32\*.exe" | fl where {$_.Length -gt 5MB}
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-List], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.FormatListCommand
+
+PS C:\Windows\system32> dir -path "C:\Windows\System32\*.exe" | where {$_.Length -gt 5MB}
+
+
+    Directorio: C:\Windows\System32
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     15/03/2020  1:44 a. m.      121542864 MRT.exe
+-a----     15/09/2018  2:28 a. m.        6784512 mspaint.exe
+-a----     15/03/2020  1:30 a. m.        9672208 ntoskrnl.exe
+-a----     21/01/2019  3:23 p. m.        5732352 VsGraphicsDesktopEngine.exe
+
+
+PS C:\Windows\system32> Get-HotFix
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-7D... Update           KB4534131     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-7D... Update           KB4465065     NT AUTHORITY\SYSTEM  14/06/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4470788     NT AUTHORITY\SYSTEM  21/01/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4480056     NT AUTHORITY\SYSTEM  21/01/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4486153     NT AUTHORITY\SYSTEM  10/10/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4486161     NT AUTHORITY\SYSTEM  25/10/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4493510     NT AUTHORITY\SYSTEM  11/04/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4499728     NT AUTHORITY\SYSTEM  17/05/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4504369     NT AUTHORITY\SYSTEM  14/06/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4509095     NT AUTHORITY\SYSTEM  10/07/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4512577     NT AUTHORITY\SYSTEM  11/09/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4512937     NT AUTHORITY\SYSTEM  14/08/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4516115     NT AUTHORITY\SYSTEM  12/09/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4521862     NT AUTHORITY\SYSTEM  9/10/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4523204     NT AUTHORITY\SYSTEM  12/11/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4524244     NT AUTHORITY\SYSTEM  12/02/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4537759     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4539571     NT AUTHORITY\SYSTEM  15/03/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4538461     NT AUTHORITY\SYSTEM  16/03/2020 12:00:00 a. m.
+
+
+PS C:\Windows\system32> help *security
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Windows\system32> help security*
+PS C:\Windows\system32> Get-HotFix | where {$_.Description -eq "Security Update"}
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-7D... Security Update  KB4470788     NT AUTHORITY\SYSTEM  21/01/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4493510     NT AUTHORITY\SYSTEM  11/04/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4499728     NT AUTHORITY\SYSTEM  17/05/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4504369     NT AUTHORITY\SYSTEM  14/06/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4509095     NT AUTHORITY\SYSTEM  10/07/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4512577     NT AUTHORITY\SYSTEM  11/09/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4512937     NT AUTHORITY\SYSTEM  14/08/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4516115     NT AUTHORITY\SYSTEM  12/09/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4521862     NT AUTHORITY\SYSTEM  9/10/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4523204     NT AUTHORITY\SYSTEM  12/11/2019 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4524244     NT AUTHORITY\SYSTEM  12/02/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4537759     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4539571     NT AUTHORITY\SYSTEM  15/03/2020 12:00:00 a. m.
+DESKTOP-7D... Security Update  KB4538461     NT AUTHORITY\SYSTEM  16/03/2020 12:00:00 a. m.
+
+
+PS C:\Windows\system32> Get-HotFix | where {$_.installedby -like "*System*" -and $_.description -like "update"}
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+DESKTOP-7D... Update           KB4534131     NT AUTHORITY\SYSTEM  13/02/2020 12:00:00 a. m.
+DESKTOP-7D... Update           KB4465065     NT AUTHORITY\SYSTEM  14/06/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4480056     NT AUTHORITY\SYSTEM  21/01/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4486153     NT AUTHORITY\SYSTEM  10/10/2019 12:00:00 a. m.
+DESKTOP-7D... Update           KB4486161     NT AUTHORITY\SYSTEM  25/10/2019 12:00:00 a. m.
+
+
+PS C:\Windows\system32> get-process | where {$_.name -eq "conhost" -and $_.name -eq "svchost"}
+PS C:\Windows\system32> get-process | where {$_.name -eq "Conhost" -and $_.name -eq "Svchost"}
+PS C:\Windows\system32> get-process | where {$_.name -like "Conhost" -and $_.name -like "Svchost"}
+PS C:\Windows\system32> get-process | where {$_.name -like "*Conhost*" -and $_.name -like "*Svchost*"}
+PS C:\Windows\system32> Get-Process | where {$_.Name -like "*Conhost*" -or $_.Name -like "*Svchost*"}
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    119       8     6512      10868       0,03   7164   2 conhost
+    377      16     4744      12652       8,58   1052   0 svchost
+    218       9     2044       7596       4,81   1068   0 svchost
+     85       5      904       3880       0,03   1108   0 svchost
+   1156      23    15744      36480      48,42   1132   0 svchost
+   1405      19     9452      17652      85,94   1244   0 svchost
+    333      11     3016      10596       5,05   1292   0 svchost
+    274      10     2540       8616       1,56   1440   0 svchost
+    253      13     2488      10584       0,84   1476   0 svchost
+    249      14     2552      11468       0,34   1564   0 svchost
+    185      10     1924      11520       0,20   1572   0 svchost
+    233       9     1940       7820       0,23   1584   0 svchost
+    154       9     2060      12076       0,56   1692   0 svchost
+    443      14    16112      19996      18,36   1700   0 svchost
+    242      13     2648      11580       0,73   1864   0 svchost
+    494      11     3008      10580       9,95   1996   0 svchost
+    154      29     5960      10100       1,16   2028   0 svchost
+    421      19     6776      18360       9,59   2052   0 svchost
+    531      10     3336       9440       7,78   2172   0 svchost
+    295      13     2656      12864       0,61   2264   0 svchost
+    225      13     2900      12336       6,83   2388   0 svchost
+    185      10     1868       8216       0,39   2404   0 svchost
+    158      11     1748       7164       0,19   2428   0 svchost
+    232      10     2292       9356       0,78   2472   0 svchost
+    251      15     2428       9948       0,20   2528   0 svchost
+    239      14   117768     120996   2.682,86   2664   0 svchost
+    173       9     1920       7800       0,19   2680   0 svchost
+    226       7     1280       5736       0,55   2700   0 svchost
+    179      12     1872       8396       0,23   2792   0 svchost
+    198       9     1920       7776       0,63   2880   0 svchost
+    176      10     1972       8756       0,77   2888   0 svchost
+    311      16     2940       9224       1,75   2980   0 svchost
+    438      14     3752      18696      15,25   3228   0 svchost
+    193       9     6712      15132      33,94   3300   0 svchost
+    522      22    20220      39096      11,05   3444   0 svchost
+    187      10     1996       8692       0,27   3476   0 svchost
+    169       7     1656       6204       0,88   3520   0 svchost
+    378      20    18384      27736      52,38   3528   0 svchost
+    278      26     4100      14060       5,17   3536   0 svchost
+    419      15    10680      20664     401,61   3544   0 svchost
+    457      19     3324      13112       1,45   3548   0 svchost
+    143      12     1704       6652       1,48   3556   0 svchost
+    233      13     3352       8736      23,17   3564   0 svchost
+    187       9     2092       7656       6,53   3712   0 svchost
+    258      13     2664       7992       1,06   3732   0 svchost
+    418      18     5612      17200       4,00   3800   0 svchost
+    455      26     5704      21772       2,30   3824   0 svchost
+    256      15     2644      14272       0,41   3848   0 svchost
+    414      32    13768      23152       4,61   4000   0 svchost
+    177       9     1756       7968       0,09   4116   0 svchost
+    134       9     1580       6636       0,06   4168   0 svchost
+    127       7     1280       5632       0,08   4256   0 svchost
+    249      15     2588       9208       0,16   4272   0 svchost
+    398      19     4656      21184       1,00   4396   0 svchost
+    476      17     3820      12516       1,34   4408   0 svchost
+    206      11     2228       8864       0,70   4492   0 svchost
+    404      27     3540      12996       0,56   4632   0 svchost
+    108       7     1260       5444       0,28   4652   0 svchost
+    504      22     8344      34840       3,36   5160   2 svchost
+    273      14     3836      18632       1,70   5492   0 svchost
+    250      12     3420      15584      17,63   6596   0 svchost
+    184      15     6228       9844       0,19   7060   0 svchost
+    212      12     1852       7908       0,14   7556   0 svchost
+    216      11     2104      11468       0,36   7672   0 svchost
+    181     101     2424       7612       0,45   7800   0 svchost
+    579      19     8700      20260      28,33   8016   0 svchost
+    541      79    26384      30484      28,55   9460   0 svchost
+    223      13     2756      10596       0,27   9580   0 svchost
+    177      10     2072       8848       0,38   9608   0 svchost
+    260      13     2912      16720       0,31  10972   2 svchost
+    226      10     4032       8468       1,25  11064   0 svchost
+    512      22    22536      41640       5,69  12044   0 svchost
+    488      27     5660      23800       1,56  13364   2 svchost
+    575      31    10976      24456       2,70  13892   0 svchost
+    117       7     1280       5472       0,02  17424   0 svchost
+    429      18     8224      25004       4,17  18436   2 svchost
+    137       8     2864       8468       0,23  18900   0 svchost
+    109       7     1384       5596       0,06  19888   0 svchost
+    197      11     2376       9860       0,16  20348   0 svchost
+
+
+PS C:\Windows\system32> Get-Process | where {$_.Name -eq "Conhost" -or $_.Name -eq "Svchost"}
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    119       8     6512      10868       0,03   7164   2 conhost
+    377      16     4744      12652       8,58   1052   0 svchost
+    217       9     2044       7592       4,81   1068   0 svchost
+     85       5      956       3896       0,03   1108   0 svchost
+   1156      23    15692      36468      48,42   1132   0 svchost
+   1401      19     9444      17640      85,94   1244   0 svchost
+    332      11     3016      10596       5,05   1292   0 svchost
+    272      10     2540       8616       1,56   1440   0 svchost
+    253      13     2488      10584       0,84   1476   0 svchost
+    249      14     2552      11468       0,34   1564   0 svchost
+    185      10     1976      11536       0,20   1572   0 svchost
+    233       9     1996       7836       0,23   1584   0 svchost
+    154       9     2148      12092       0,56   1692   0 svchost
+    443      14    16112      19996      18,38   1700   0 svchost
+    242      13     2700      11596       0,73   1864   0 svchost
+    494      11     2956      10568       9,95   1996   0 svchost
+    154      29     5960      10100       1,16   2028   0 svchost
+    421      19     6724      18344       9,59   2052   0 svchost
+    531      10     3336       9440       7,78   2172   0 svchost
+    295      13     2656      12864       0,61   2264   0 svchost
+    223      13     2900      12332       6,83   2388   0 svchost
+    185      10     1920       8228       0,39   2404   0 svchost
+    156      11     1748       7160       0,19   2428   0 svchost
+    232      10     2292       9356       0,78   2472   0 svchost
+    251      15     2480       9960       0,20   2528   0 svchost
+    237      14   117828     121052   2.682,92   2664   0 svchost
+    173       9     1972       7816       0,19   2680   0 svchost
+    226       7     1332       5748       0,55   2700   0 svchost
+    179      12     1872       8396       0,23   2792   0 svchost
+    198       9     1976       7788       0,63   2880   0 svchost
+    176      10     2028       8768       0,77   2888   0 svchost
+    311      16     2940       9224       1,75   2980   0 svchost
+    438      14     3840      18712      15,25   3228   0 svchost
+    193       9     6768      15144      33,94   3300   0 svchost
+    522      22    20220      39096      11,05   3444   0 svchost
+    187      11     2052       8708       0,27   3476   0 svchost
+    169       7     1712       6220       0,88   3520   0 svchost
+    373      20    18332      27704      52,38   3528   0 svchost
+    281      26     4212      14092       5,17   3536   0 svchost
+    419      15    10588      20608     402,02   3544   0 svchost
+    457      19     3324      13112       1,45   3548   0 svchost
+    143      12     1704       6652       1,48   3556   0 svchost
+    232      13     3332       8720      23,20   3564   0 svchost
+    187       9     2060       7632       6,55   3712   0 svchost
+    258      13     2716       8008       1,06   3732   0 svchost
+    418      18     5612      17200       4,00   3800   0 svchost
+    455      26     5704      21772       2,30   3824   0 svchost
+    256      15     2696      14288       0,41   3848   0 svchost
+    414      32    13824      23164       4,61   4000   0 svchost
+    177       9     1756       7968       0,09   4116   0 svchost
+    134       9     1636       6652       0,06   4168   0 svchost
+    127       7     1280       5632       0,08   4256   0 svchost
+    249      15     2644       9220       0,16   4272   0 svchost
+    398      19     4656      21184       1,00   4396   0 svchost
+    476      17     3820      12516       1,34   4408   0 svchost
+    206      11     2280       8880       0,70   4492   0 svchost
+    404      27     3596      13008       0,56   4632   0 svchost
+    108       7     1312       5460       0,30   4652   0 svchost
+    504      22     8344      34840       3,36   5160   2 svchost
+    273      14     3836      18632       1,70   5492   0 svchost
+    250      12     3368      15568      17,63   6596   0 svchost
+    184      14     6176       9832       0,19   7060   0 svchost
+    212      12     1852       7908       0,14   7556   0 svchost
+    216      11     2104      11468       0,36   7672   0 svchost
+    181     101     2424       7612       0,45   7800   0 svchost
+    579      19     8648      20248      28,36   8016   0 svchost
+    541      79    26332      30468      28,55   9460   0 svchost
+    223      13     2756      10596       0,27   9580   0 svchost
+    177      10     2016       8832       0,38   9608   0 svchost
+    255      12     2856      16688       0,31  10972   2 svchost
+    226      10     4032       8468       1,25  11064   0 svchost
+    512      22    22484      41628       5,69  12044   0 svchost
+    488      27     5608      23784       1,56  13364   2 svchost
+    575      31    10976      24456       2,70  13892   0 svchost
+    117       7     1280       5472       0,02  17424   0 svchost
+    429      18     8172      24992       4,17  18436   2 svchost
+    109       7     1384       5596       0,06  19888   0 svchost
+    197      11     2324       9848       0,16  20348   0 svchost
+
 PS C:\> Stop-Transcript
 **********************
 Fin de la transcripción de Windows PowerShell
