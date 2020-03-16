@@ -1,8 +1,6 @@
-# TALLER POWERSHELL 5
+# ACCESO A CARACTERÍSTICAS AVANZADAS DE ADMINISTRACIÓN
 
-## ACCESO A CARACTERÍSTICAS AVANZADAS DE ADMINISTRACIÓN
-
-### ASPECTOS BÁSICOS DE WMI Y CIM
+## ASPECTOS BÁSICOS DE WMI Y CIM
 
 ##### ¿Cuál clase puede emplearse para consultar la dirección IP de un adaptador de red? ¿Posee dicha clase algún método para liberar un préstamo de dirección (lease) DHCP?
 
