@@ -2,13 +2,13 @@
 
 ## ASPECTOS BÁSICOS DE WMI Y CIM
 
-##### ¿Cuál clase puede emplearse para consultar la dirección IP de un adaptador de red? ¿Posee dicha clase algún método para liberar un préstamo de dirección (lease) DHCP?
+##### 1. ¿Cuál clase puede emplearse para consultar la dirección IP de un adaptador de red? ¿Posee dicha clase algún método para liberar un préstamo de dirección (lease) DHCP?
 
 ```powershell
 
 ```
 
-##### Despliegue una lista de parches empleando WMI (Microsoft se refiere a los parches con el nombre **quick-fix engineering**). Es diferente el listado al que produce el cmdlet ``Get-Hotfix``?
+##### 2. Despliegue una lista de parches empleando WMI (Microsoft se refiere a los parches con el nombre **quick-fix engineering**). Es diferente el listado al que produce el cmdlet ``Get-Hotfix``?
 
 ```powershell
 
