@@ -3756,7 +3756,3380 @@ productState             : 266240
 timestamp                : Mon, 16 Mar 2020 01:34:49 GMT
 PSComputerName           :
 
+PS C:\Windows\system32> help get-ciminstance
 
+NOMBRE
+    Get-CimInstance
+
+SINOPSIS
+    Gets the CIM instances of a class from a CIM server.
+
+
+SINTAXIS
+    Get-CimInstance [-ClassName] <String> [-ComputerName <String[]>] [-Filter <String>] [-KeyOnly] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-Property <String[]>]
+    [-QueryDialect <String>] [-Shallow] [<CommonParameters>]
+
+    Get-CimInstance [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-QueryDialect <String>] [-ResourceUri <Uri>] [-Shallow] -CimSession <CimSession[]> -Query <String>
+    [<CommonParameters>]
+
+    Get-CimInstance [-InputObject] <CimInstance> [-OperationTimeoutSec <UInt32>] [-ResourceUri <Uri>] -CimSession <CimSession[]> [<CommonParameters>]
+
+    Get-CimInstance [-ClassName] <String> [-Filter <String>] [-KeyOnly] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-Property <String[]>] [-QueryDialect <String>]
+    [-Shallow] -CimSession <CimSession[]> [<CommonParameters>]
+
+    Get-CimInstance [-Filter <String>] [-KeyOnly] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-Property <String[]>] [-Shallow] -CimSession <CimSession[]> -ResourceUri
+    <Uri> [<CommonParameters>]
+
+    Get-CimInstance [-ComputerName <String[]>] [-Filter <String>] [-KeyOnly] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-Property <String[]>] [-Shallow] -ResourceUri
+    <Uri> [<CommonParameters>]
+
+    Get-CimInstance [-ComputerName <String[]>] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-QueryDialect <String>] [-ResourceUri <Uri>] [-Shallow] -Query <String>
+    [<CommonParameters>]
+
+    Get-CimInstance [-InputObject] <CimInstance> [-ComputerName <String[]>] [-OperationTimeoutSec <UInt32>] [-ResourceUri <Uri>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-CimInstance cmdlet gets the Common Information Model (CIM) instances of a class from a CIM server. You can specify either the class name or a query for this cmdlet.
+
+    This cmdlet returns one or more CIM instance objects representing a snapshot of the CIM instances present on the CIM server.
+
+    If the InputObject parameter is not specified, the cmdlet works in one of the following ways:
+
+    --If neither the ComputerName parameter nor the CimSession parameter is specified, then this cmdlet works on local Windows Management Instrumentation (WMI) using a Component
+    Object Model (COM) session.
+    --If either the ComputerName parameter or the CimSession parameter is specified, then this cmdlet works against the CIM server specified by either the ComputerName parameter or
+    the CimSession parameter.
+
+    If the InputObject parameter is specified, the cmdlet works in one of the following ways:
+
+    --If neither the ComputerName parameter nor the CimSession parameter is specified, then this cmdlet uses the CIM session or computer name from the input object.
+    --If the either the ComputerName parameter or the CimSession parameter is specified, then this cmdlet uses the either the CimSession parameter value or ComputerName parameter
+    value. Note: This is not very common.
+
+
+
+
+
+
+VÍNCULOS RELACIONADOS
+    Online Version:
+    Get-CimAssociatedInstance
+    Get-CimClass
+    Invoke-CimMethod
+    New-CimInstance
+    Register-CimIndicationEvent
+    Remove-CimInstance
+    Set-CimInstance
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-CimInstance -examples".
+    Para obtener más información, escriba: "get-help Get-CimInstance -detailed".
+    Para obtener información técnica, escriba: "get-help Get-CimInstance -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-CimInstance -online"
+
+
+PS C:\Windows\system32> help get-ciminstance -full
+
+NOMBRE
+    Get-CimInstance
+
+SINOPSIS
+    Gets the CIM instances of a class from a CIM server.
+
+
+SINTAXIS
+    Get-CimInstance [-ClassName] <String> [-ComputerName <String[]>] [-Filter <String>] [-KeyOnly] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-Property <String[]>]
+    [-QueryDialect <String>] [-Shallow] [<CommonParameters>]
+
+    Get-CimInstance [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-QueryDialect <String>] [-ResourceUri <Uri>] [-Shallow] -CimSession <CimSession[]> -Query <String>
+    [<CommonParameters>]
+
+    Get-CimInstance [-InputObject] <CimInstance> [-OperationTimeoutSec <UInt32>] [-ResourceUri <Uri>] -CimSession <CimSession[]> [<CommonParameters>]
+
+    Get-CimInstance [-ClassName] <String> [-Filter <String>] [-KeyOnly] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-Property <String[]>] [-QueryDialect <String>]
+    [-Shallow] -CimSession <CimSession[]> [<CommonParameters>]
+
+    Get-CimInstance [-Filter <String>] [-KeyOnly] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-Property <String[]>] [-Shallow] -CimSession <CimSession[]> -ResourceUri
+    <Uri> [<CommonParameters>]
+
+    Get-CimInstance [-ComputerName <String[]>] [-Filter <String>] [-KeyOnly] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-Property <String[]>] [-Shallow] -ResourceUri
+    <Uri> [<CommonParameters>]
+
+    Get-CimInstance [-ComputerName <String[]>] [-Namespace <String>] [-OperationTimeoutSec <UInt32>] [-QueryDialect <String>] [-ResourceUri <Uri>] [-Shallow] -Query <String>
+    [<CommonParameters>]
+
+    Get-CimInstance [-InputObject] <CimInstance> [-ComputerName <String[]>] [-OperationTimeoutSec <UInt32>] [-ResourceUri <Uri>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-CimInstance cmdlet gets the Common Information Model (CIM) instances of a class from a CIM server. You can specify either the class name or a query for this cmdlet.
+
+    This cmdlet returns one or more CIM instance objects representing a snapshot of the CIM instances present on the CIM server.
+
+    If the InputObject parameter is not specified, the cmdlet works in one of the following ways:
+
+    --If neither the ComputerName parameter nor the CimSession parameter is specified, then this cmdlet works on local Windows Management Instrumentation (WMI) using a Component
+    Object Model (COM) session.
+    --If either the ComputerName parameter or the CimSession parameter is specified, then this cmdlet works against the CIM server specified by either the ComputerName parameter or
+    the CimSession parameter.
+
+    If the InputObject parameter is specified, the cmdlet works in one of the following ways:
+
+    --If neither the ComputerName parameter nor the CimSession parameter is specified, then this cmdlet uses the CIM session or computer name from the input object.
+    --If the either the ComputerName parameter or the CimSession parameter is specified, then this cmdlet uses the either the CimSession parameter value or ComputerName parameter
+    value. Note: This is not very common.
+
+
+
+
+
+
+PARÁMETROS
+    -CimSession <CimSession[]>
+        Specifies the CIM session to use for this cmdlet. Enter a variable that contains the CIM session or a command that creates or gets the CIM session, such as the
+        New-CimSession or Get-CimSession cmdlets. For more information, see about_CimSessions.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -ClassName <String>
+        Specifies the name of the CIM class for which to retrieve the CIM instances.
+        NOTE: You can use tab completion to browse the list of classes, because Windows PowerShell gets a list of classes from the local WMI server to provide a list of class names.
+
+        ¿Requerido?                  true
+        ¿Posición?                   1
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -ComputerName [<String[]>]
+        Specifies computer on which you want to run the CIM operation. You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address.
+
+        If you do not specify this parameter, the cmdlet performs the operation on the local computer using Component Object Model (COM).
+
+        If you specify this parameter, the cmdlet creates a temporary session to the specified computer using the WsMan protocol.
+
+        If multiple operations are being performed on the same computer, using a CIM session gives better performance.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -Filter [<String>]
+        Specifies a where clause to use as a filter. Specify the clause in either the WQL or the CQL query language.
+
+        Note: Do not include the where keyword in the value of the parameter.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -InputObject <CimInstance>
+        Specifies a CIM instance object to use as input.
+
+        If you are already working with a CIM instance object, you can use this parameter to pass the CIM instance object in order to get the latest snapshot from the CIM server.
+        When you pass a CIM instance object as an input, Get-CimInstance returns the object from server using a get CIM operation, instead of an enumerate or query operation. Using
+        a get CIM operation is more efficient than retrieving all instances and then filtering them.
+
+        If the CIM class does not implement the get operation, then specifying the InputObject parameter returns an error.
+
+        ¿Requerido?                  true
+        ¿Posición?                   1
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByValue)
+        ¿Aceptar caracteres comodín? false
+
+    -KeyOnly [<SwitchParameter>]
+        Indicates that only objects with key properties populated are returned. Specifying the KeyOnly parameter reduces the amount of data transferred over the network.
+
+        Use the KeyOnly parameter to return only a small portion of the object, which can be used for other operations, such as the Set-CimInstance or Get-CimAssociatedInstance
+        cmdlets.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -Namespace [<String>]
+        Specifies the namespace of CIM class.
+
+        The default namespace is root/cimv2.
+        NOTE: You can use tab completion to browse the list of namespaces, because Windows PowerShell gets a list of namespaces from the local WMI server to provide the list of
+        namespaces.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -OperationTimeoutSec [<UInt32>]
+        Specifies the amount of time that the cmdlet waits for a response from the computer.
+
+        By default, the value of this parameter is 0, which means that the cmdlet uses the default timeout value for the server.
+
+        If the OperationTimeoutSec parameter is set to a value less than the robust connection retry timeout of 3 minutes, network failures that last more than the value of the
+        OperationTimeoutSec parameter are not recoverable, because the operation on the server times out before the client can reconnect.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    -Property [<String[]>]
+        Specifies a set of instance properties to retrieve.
+
+        Use this parameter when you need to reduce the size of the object returned, either in memory or over the network.
+
+        The object returned always has key properties populated, irrespective of the set of properties listed by the Property parameter. Other properties of the class are present
+        but they are not populated.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -Query <String>
+        Specifies a query to run on the CIM server. For WQL-based queries, you can only use a SELECT query that returns instances.
+
+        If the value specified contains double quotes (“), single quotes (‘), or a backslash (\), you must escape those characters by prefixing them with the backslash (\)
+        character. If the value specified uses the WQL LIKE operator, then you must escape the following characters by enclosing them in square brackets ([]): percent (%),
+        underscore (_), or opening square bracket ([).
+
+        You cannot use a metadata query to retrieve a list of classes or an event query. To retrieve a list of classes, use the Get-CimClass cmdlet. To retrieve an event query, use
+        the Register-CimIndicationEvent cmdlet.
+
+        You can specify the query dialect using the QueryDialect parameter.
+
+        ¿Requerido?                  true
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -QueryDialect [<String>]
+        Specifies the query language used for the Query parameter.
+
+        The acceptable values for this parameter are: WQL or CQL.
+
+        The default value is WQL.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -ResourceUri [<Uri>]
+        Specifies the resource uniform resource identifier (URI) of the resource class or instance. The URI is used to identify a specific type of resource, such as disks or
+        processes, on a computer.
+
+        A URI consists of a prefix and a path to a resource. For example:
+
+        http://schemas.microsoft.com/wbem/wsman/1/wmi/root/cimv2/Win32_LogicalDisk
+        http://intel.com/wbem/wscim/1/amt-schema/1/AMT_GeneralSettings
+
+        By default, if you do not specify this parameter, the DMTF standard resource URI http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/ is used and the class name is appended
+        to it.
+
+        ResourceURI can only be used with CIM sessions created using the WSMan protocol, or when specifying the ComputerName parameter, which creates a CIM session using WSMan. If
+        you specify this parameter without specifying the ComputerName parameter, or if you specify a CIM session created using DCOM protocol, you will get an error, because the
+        DCOM protocol does not support the ResourceURI parameter.
+
+        If both the ResourceUri parameter and the Filter parameter are specified, the Filter parameter is ignored.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       True (ByPropertyName)
+        ¿Aceptar caracteres comodín? false
+
+    -Shallow [<SwitchParameter>]
+        Indicates that the instances of a class are returned without including the instances of any child classes.
+
+        By default, the cmdlet returns the instances of a class and its child classes.
+
+        ¿Requerido?                  false
+        ¿Posición?                   named
+        Valor predeterminado         none
+        ¿Aceptar canalización?       false
+        ¿Aceptar caracteres comodín? false
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+ENTRADAS
+        CIM Instance
+
+        This cmdlet accepts an input objects specified with the InputObject parameter.
+
+
+SALIDAS
+        CIM Instance
+
+        This cmdlet returns one or more CIM instance objects representing a snapshot of the CIM instances on the CIM server.
+
+
+    Example 1: Get the CIM instances of a specified class
+
+    PS C:\> Get-CimInstance -ClassName Win32_Process
+
+    This command gets the CIM instances of a class named Win32_Process.
+
+
+    Example 2: Get a list of namespaces from a WMI server
+
+    PS C:\>Get-CimInstance –Namespace root –ClassName __Namespace
+
+    This command gets a list of namespaces under the Root namespace on a WMI server.
+
+
+    Example 3: Get instances of a class filtered by using a query
+
+    PS C:\>Get-CimInstance -Query "SELECT * from Win32_Process WHERE name LIKE 'p%'"
+
+    This command gets all the CIM instances that start with the letter p of a class named Win32_Process using the query specified by a Query parameter.
+
+
+    Example 4: Get instances of a class filtered by using a class name and a filter expression
+
+    PS C:\>Get-CimInstance -ClassName Win32_Process -Filter "Name like 'p%'"
+
+    This command retrieves all the CIM instances that start with the letter p of a class named Win32_Process using the Filter parameter.
+
+
+    Example 5: Get the CIM instances with only key properties filled in
+
+    PS C:\>$x = New-CimInstance -ClassName Win32_Process -Namespace root\cimv2 -Property @{ "Handle"=0 } -Key Handle -ClientOnly
+
+
+    The variable is passed as a CIM instance to the Get-CimInstance cmdlet to get a particular instance.
+    PS C:\>Get-CimInstance -CimInstance $x
+
+    This set of commands creates a new CIM instance in memory for a class named Win32_Process with the key property @{ "Handle"=0 } and stores it in a variable named $x.
+
+
+    Example 6: Retrieve CIM instances and reuse them
+
+    PS C:\>$x,$y = Get-CimInstance -ClassName Win32_Process
+
+
+    PS C:\>$x| Format-Table -Property Name,KernelModeTime -AutoSize
+
+
+    PS C:\>$x| Get-CimInstance |Format-Table -Property Name,KernelModeTime -AutoSize
+
+    This set of commands gets the CIM instances of a class named Win32_Process and stores them in the variables $x and $y. The variable $x is then formatted in a table containing
+    only the Name and the KernelModeTime attributes, the table set to AutoSize.
+
+
+    Example 7: Get CIM instances from remote computer
+
+    PS C:\>Get-CimInstance -ClassName Win32_ComputerSystem -ComputerName Server01,Server02
+
+    This command retrieves the CIM instances of a class named Win32_ComputerSystem from the remote computers named Server01 and Server02.
+
+
+    Example 8: Getting only the key properties, instead of all properties
+
+    PS C:\>Get-CimInstance -Class Win32_Process -KeyOnly
+
+    PS C:\>$x = Get-CimInstance -Class Win32_Process -KeyOnlyPS C:\>$x | Invoke-CimMethod -MethodName GetOwner
+
+    This command retrieves only the key properties, which reduces the size of the object and network traffic.
+
+
+    Example 9: Getting only a subset of properties, instead of all properties
+
+    PS C:\>Get-CimInstance -Class Win32_Process -Property Name,KernelModeTime
+
+    PS C:\>$x = Get-CimInstance -Class Win32_Process -Property Name, KernelModeTimePS C:\>$x | Invoke-CimMethod -MethodName GetOwner
+
+    The instance retrieved with the Property parameter can be used to perform other CIM operations, for example Set-CimInstance or Invoke-CimMethod.
+    PS C:\>$x = Get-CimInstance -Class Win32_Process -Property Name,KernelModeTime
+
+
+
+    PS C:\>Invoke-CimMethod –InputObject $x -MethodName GetOwner
+
+    This command retrieves only a subset of properties, which reduces the size of the object and network traffic.
+
+
+    Example 10: Get the CIM instance using CIM session
+
+    PS C:\>$s = New-CimSession –ComputerName Server01,Server02
+
+
+
+    PS C:\>Get-CimInstance -ClassName Win32_ComputerSystem -CimSession $s
+
+    This set of commands creates a CIM session on the computers named Server01 and Server02 using the New-CimSession cmdlet and stores the session information in a variable named
+    $s. The contents of the variable are then passed to Get-CimInstance by using the CimSession parameter, to get the CIM instances of the class named Win32_ComputerSystem.
+
+
+
+VÍNCULOS RELACIONADOS
+    Online Version:
+    Get-CimAssociatedInstance
+    Get-CimClass
+    Invoke-CimMethod
+    New-CimInstance
+    Register-CimIndicationEvent
+    Remove-CimInstance
+    Set-CimInstance
+
+
+
+PS C:\Windows\system32> Get-CimInstance -ClassName
+>> ErrorTerminación(Get-CimInstance): "Falta un argumento para el parámetro 'ClassName'. Especifique un parámetro del tipo 'System.String' e inténtelo de nuevo."
+Get-CimInstance : Falta un argumento para el parámetro 'ClassName'. Especifique un parámetro del tipo 'System.String' e 
+inténtelo de nuevo.
+En línea: 1 Carácter: 17
++ Get-CimInstance -ClassName
++                 ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-CimInstance], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.Management.Infrastructure.CimCmdlets.GetCimInstanceCommand
+Get-CimInstance : Falta un argumento para el parámetro 'ClassName'. Especifique un parámetro del tipo 'System.String' e inténtelo de nuevo.
+En línea: 1 Carácter: 17
++ Get-CimInstance -ClassName
++                 ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-CimInstance], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.Management.Infrastructure.CimCmdlets.GetCimInstanceCommand
+
+PS C:\Windows\system32> Get-CimClass
+
+
+   NameSpace: ROOT/cimv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_Indication                      {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassIndication                 {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassDeletion                   {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassCreation                   {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassModification               {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstIndication                  {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstCreation                    {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstModification                {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstDeletion                    {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+__NotifyStatus                      {}                   {StatusCode}
+__ExtendedStatus                    {}                   {StatusCode, Description, Operation, ParameterInfo...}
+Win32_PrivilegesStatus              {}                   {StatusCode, Description, Operation, ParameterInfo...}
+Win32_JobObjectStatus               {}                   {StatusCode, Description, Operation, ParameterInfo...}
+CIM_Error                           {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+MSFT_WmiError                       {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+MSFT_ExtendedStatus                 {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+__SecurityRelatedClass              {}                   {}
+__Trustee                           {}                   {Domain, Name, SID, SidLength...}
+Win32_Trustee                       {}                   {Domain, Name, SID, SidLength...}
+__NTLMUser9X                        {}                   {Authority, Flags, Mask, Name...}
+__ACE                               {}                   {AccessMask, AceFlags, AceType, GuidInheritedObjectType...}
+Win32_ACE                           {}                   {AccessMask, AceFlags, AceType, GuidInheritedObjectType...}
+__SecurityDescriptor                {}                   {ControlFlags, DACL, Group, Owner...}
+Win32_SecurityDescriptor            {}                   {ControlFlags, DACL, Group, Owner...}
+__PARAMETERS                        {}                   {}
+__SystemClass                       {}                   {}
+__ProviderRegistration              {}                   {provider}
+__EventProviderRegistration         {}                   {provider, EventQueryList}
+__ObjectProviderRegistration        {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__ClassProviderRegistration         {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__InstanceProviderRegistration      {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__MethodProviderRegistration        {}                   {provider}
+__PropertyProviderRegistration      {}                   {provider, SupportsGet, SupportsPut}
+__EventConsumerProviderRegistration {}                   {provider, ConsumerClassNames}
+__thisNAMESPACE                     {}                   {SECURITY_DESCRIPTOR}
+__NAMESPACE                         {}                   {Name}
+__IndicationRelated                 {}                   {}
+__FilterToConsumerBinding           {}                   {Consumer, CreatorSID, DeliverSynchronously, DeliveryQoS...}
+__EventConsumer                     {}                   {CreatorSID, MachineName, MaximumQueueSize}
+__AggregateEvent                    {}                   {NumberOfEvents, Representative}
+__TimerNextFiring                   {}                   {NextEvent64BitTime, TimerId}
+__EventFilter                       {}                   {CreatorSID, EventAccess, EventNamespace, Name...}
+__Event                             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__NamespaceOperationEvent           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__NamespaceModificationEvent        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace, PreviousNamespace}
+__NamespaceDeletionEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__NamespaceCreationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__ClassOperationEvent               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__ClassDeletionEvent                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__ClassModificationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass, PreviousClass}
+__ClassCreationEvent                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__InstanceOperationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__InstanceCreationEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__MethodInvocationEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance, Method...}
+__InstanceModificationEvent         {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance, PreviousInstance}
+__InstanceDeletionEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__TimerEvent                        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NumFirings, TimerId}
+__ExtrinsicEvent                    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__SystemEvent                       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__EventDroppedEvent                 {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer}
+__EventQueueOverflowEvent           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+__QOSFailureEvent                   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+__ConsumerFailureEvent              {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+MSFT_SCMEvent                       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_SCMEventLogEvent               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_NetSevereServiceFailed         {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetTransactInvalid             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_NetServiceNotInteractive       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetTakeOwnership               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, RegistryKey}
+MSFT_NetServiceConfigBackoutFailed  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ConfigField, Service}
+MSFT_NetServiceShutdownFailed       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceStartHung            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceStopControlSuccess   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Comment, Control...}
+MSFT_NetServiceSlowStartup          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service, StartupTime}
+MSFT_NetCallToFunctionFailed        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error, FunctionName}
+MSFT_NetBadAccount                  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_NetBadServiceState             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service, State}
+MSFT_NetConnectionTimeout           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Milliseconds, Service}
+MSFT_NetCircularDependencyAuto      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_NetServiceStartTypeChanged     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NewStartType, OldStartType...}
+MSFT_NetServiceLogonTypeNotGranted  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Account, Error...}
+MSFT_NetServiceStartFailedGroup     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Group, Service}
+MSFT_NetDependOnLaterService        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetFirstLogonFailedII          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Account, Error...}
+MSFT_NetServiceDifferentPIDConne... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ActualPID, ExpectedPID...}
+MSFT_NetServiceCrashNoAction        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service, TimesFailed}
+MSFT_NetCircularDependencyDemand    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_NetServiceExitFailed           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error, Service}
+MSFT_NetServiceStartFailedII        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, DependedOnService, Error...}
+MSFT_NetServiceExitFailedSpecific   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error, Service}
+MSFT_NetBootSystemDriversFailed     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, DriverList}
+MSFT_NetServiceCrash                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Action, ActionDelay...}
+MSFT_NetServiceRecoveryFailed       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Action, ActionType...}
+MSFT_NetServiceStatusSuccess        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Control, Service}
+MSFT_NetTransactTimeout             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Milliseconds, Service}
+MSFT_NetFirstLogonFailed            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error}
+MSFT_NetServiceControlSuccess       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Control, Service...}
+MSFT_NetServiceStartFailed          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Error, Service}
+MSFT_NetServiceStartFailedNone      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NonExistingService, Service}
+MSFT_NetReadfileTimeout             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Milliseconds}
+MSFT_NetRevertedToLastKnownGood     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_NetCallToFunctionFailedII      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Argument, Error...}
+MSFT_NetDependOnLaterGroup          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Service}
+MSFT_WmiSelfEvent                   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_WmiEssEvent                    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_WmiThreadPoolEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ThreadId}
+MSFT_WmiThreadPoolThreadCreated     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ThreadId}
+MSFT_WmiThreadPoolThreadDeleted     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ThreadId}
+MSFT_WmiRegisterNotificationSink    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, Query...}
+MSFT_WmiFilterEvent                 {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Name, Namespace...}
+MSFT_WmiFilterDeactivated           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Name, Namespace...}
+MSFT_WmiFilterActivated             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Name, Namespace...}
+MSFT_WmiCancelNotificationSink      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, Query...}
+MSFT_WmiProviderEvent               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName}
+MSFT_WmiConsumerProviderEvent       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+MSFT_WmiConsumerProviderSinkLoaded  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+MSFT_WmiConsumerProviderSinkUnlo... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+MSFT_WmiConsumerProviderUnloaded    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+MSFT_WmiConsumerProviderLoaded      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+Msft_WmiProvider_OperationEvent     {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ComServerLoadOp... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_OperationEvent_... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_PutInstanceAsyn... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CreateInstanceE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_DeleteInstanceA... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CancelQuery_Post   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_NewQuery_Post      {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ProvideEvents_Post {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ExecQueryAsyncE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_AccessCheck_Post   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CreateClassEnum... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_DeleteClassAsyn... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ExecMethodAsync... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_GetObjectAsyncE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_PutClassAsyncEv... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_InitializationO... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_InitializationO... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_LoadOperationFa... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ComServerLoadOp... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_UnLoadOperation... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_LoadOperationEvent {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_OperationEvent_Pre {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_DeleteInstanceA... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_AccessCheck_Pre    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ExecQueryAsyncE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_DeleteClassAsyn... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_NewQuery_Pre       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_PutInstanceAsyn... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CreateClassEnum... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ExecMethodAsync... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_ProvideEvents_Pre  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CancelQuery_Pre    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_PutClassAsyncEv... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_GetObjectAsyncE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+Msft_WmiProvider_CreateInstanceE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, HostingGroup, HostingSpecification...}
+MSFT_WMI_GenericNonCOMEvent         {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ProcessId, PropertyNames...}
+Win32_ComputerSystemEvent           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, MachineName}
+Win32_ComputerShutdownEvent         {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, MachineName, Type}
+Win32_IP4RouteTableEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+MSFT_NCProvEvent                    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+MSFT_NCProvCancelQuery              {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+MSFT_NCProvClientConnected          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+MSFT_NCProvNewQuery                 {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+MSFT_NCProvAccessCheck              {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Namespace, ProviderName...}
+RegistryEvent                       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+RegistryKeyChangeEvent              {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Hive, KeyPath}
+RegistryTreeChangeEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Hive, RootPath}
+RegistryValueChangeEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Hive, KeyPath...}
+Win32_SystemTrace                   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+Win32_ProcessTrace                  {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ParentProcessID, ProcessID...}
+Win32_ProcessStartTrace             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ParentProcessID, ProcessID...}
+Win32_ProcessStopTrace              {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ParentProcessID, ProcessID...}
+Win32_ModuleTrace                   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+Win32_ModuleLoadTrace               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, DefaultBase, FileName...}
+Win32_ThreadTrace                   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ProcessID, ThreadID}
+Win32_ThreadStartTrace              {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ProcessID, ThreadID...}
+Win32_ThreadStopTrace               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, ProcessID, ThreadID}
+Win32_PowerManagementEvent          {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, EventType, OEMEventCode}
+Win32_DeviceChangeEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, EventType}
+Win32_SystemConfigurationChangeE... {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, EventType}
+Win32_VolumeChangeEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, EventType, DriveName}
+__EventGenerator                    {}                   {}
+__TimerInstruction                  {}                   {SkipIfPassed, TimerId}
+__AbsoluteTimerInstruction          {}                   {SkipIfPassed, TimerId, EventDateTime}
+__IntervalTimerInstruction          {}                   {SkipIfPassed, TimerId, IntervalBetweenEvents}
+__Provider                          {}                   {Name}
+__Win32Provider                     {}                   {Name, ClientLoadableCLSID, CLSID, Concurrency...}
+__SystemSecurity                    {GetSD, GetSecuri... {}
+Win32_CollectionStatistics          {}                   {Collection, Stats}
+Win32_NamedJobObjectStatistics      {}                   {Collection, Stats}
+Win32_NTLogEvent                    {}                   {Category, CategoryString, ComputerName, Data...}
+CIM_Configuration                   {}                   {Caption, Description, Name}
+CIM_LogicalIdentity                 {}                   {SameElement, SystemElement}
+Win32_ActiveRoute                   {}                   {SameElement, SystemElement}
+Win32_AccountSID                    {}                   {Element, Setting}
+CIM_Location                        {}                   {Address, Name, PhysicalPosition}
+CIM_DependencyContext               {}                   {Context, Dependency}
+Win32_WinSAT                        {}                   {CPUScore, D3DScore, DiskScore, GraphicsScore...}
+Win32_SecurityDescriptorHelper      {Win32SDToSDDL, W... {}
+CIM_Setting                         {}                   {Caption, Description, SettingID}
+Win32_TimeZone                      {}                   {Caption, Description, SettingID, Bias...}
+Win32_PageFileSetting               {}                   {Caption, Description, SettingID, InitialSize...}
+Win32_Desktop                       {}                   {Caption, Description, SettingID, BorderWidth...}
+Win32_ShadowContext                 {}                   {Caption, Description, SettingID, ClientAccessible...}
+Win32_MSIResource                   {}                   {Caption, Description, SettingID}
+Win32_ServiceControl                {}                   {Caption, Description, SettingID, Arguments...}
+Win32_Property                      {}                   {Caption, Description, SettingID, ProductCode...}
+Win32_Patch                         {}                   {Caption, Description, SettingID, Attributes...}
+Win32_PatchPackage                  {}                   {Caption, Description, SettingID, PatchID...}
+Win32_Binary                        {}                   {Caption, Description, SettingID, Data...}
+Win32_AutochkSetting                {}                   {Caption, Description, SettingID, UserInputDelay}
+Win32_SerialPortConfiguration       {}                   {Caption, Description, SettingID, AbortReadWriteOnError...}
+CIM_MonitorResolution               {}                   {Caption, Description, SettingID, HorizontalResolution...}
+Win32_StartupCommand                {}                   {Caption, Description, SettingID, Command...}
+Win32_BootConfiguration             {}                   {Caption, Description, SettingID, BootDirectory...}
+Win32_NetworkLoginProfile           {}                   {Caption, Description, SettingID, AccountExpires...}
+Win32_NamedJobObjectLimitSetting    {}                   {Caption, Description, SettingID, ActiveProcessLimit...}
+CIM_VideoControllerResolution       {}                   {Caption, Description, SettingID, HorizontalResolution...}
+Win32_NamedJobObjectSecLimitSetting {}                   {Caption, Description, SettingID, PrivilegesToDelete...}
+Win32_DisplayConfiguration          {}                   {Caption, Description, SettingID, BitsPerPel...}
+Win32_NetworkAdapterConfiguration   {EnableDHCP, Rene... {Caption, Description, SettingID, ArpAlwaysSourceRoute...}
+Win32_QuotaSetting                  {}                   {Caption, Description, SettingID, DefaultLimit...}
+Win32_SecuritySetting               {GetSecurityDescr... {Caption, Description, SettingID, ControlFlags}
+Win32_LogicalFileSecuritySetting    {GetSecurityDescr... {Caption, Description, SettingID, ControlFlags...}
+Win32_LogicalShareSecuritySetting   {GetSecurityDescr... {Caption, Description, SettingID, ControlFlags...}
+Win32_DisplayControllerConfigura... {}                   {Caption, Description, SettingID, BitsPerPixel...}
+Win32_WMISetting                    {}                   {Caption, Description, SettingID, ASPScriptDefaultNamespace...}
+Win32_OSRecoveryConfiguration       {}                   {Caption, Description, SettingID, AutoReboot...}
+Win32_COMSetting                    {}                   {Caption, Description, SettingID}
+Win32_ClassicCOMClassSetting        {}                   {Caption, Description, SettingID, AppID...}
+Win32_DCOMApplicationSetting        {GetLaunchSecurit... {Caption, Description, SettingID, AppID...}
+Win32_VideoConfiguration            {}                   {Caption, Description, SettingID, ActualColorResolution...}
+Win32_ODBCAttribute                 {}                   {Caption, Description, SettingID, Attribute...}
+Win32_ODBCSourceAttribute           {}                   {Caption, Description, SettingID, Attribute...}
+ScriptingStandardConsumerSetting    {}                   {Caption, Description, SettingID, MaximumScripts...}
+Win32_PrinterConfiguration          {}                   {Caption, Description, SettingID, BitsPerPel...}
+Win32_CurrentTime                   {}                   {Day, DayOfWeek, Hour, Milliseconds...}
+Win32_UTCTime                       {}                   {Day, DayOfWeek, Hour, Milliseconds...}
+Win32_LocalTime                     {}                   {Day, DayOfWeek, Hour, Milliseconds...}
+CIM_FRU                             {}                   {Caption, Description, FRUNumber, IdentifyingNumber...}
+CIM_Action                          {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_ShortcutAction                {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_RebootAction                    {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_ExtensionInfoAction           {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_DirectoryAction                 {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_CreateDirectoryAction           {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_CreateFolderAction            {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_RemoveDirectoryAction           {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_RegistryAction                {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_ClassInfoAction               {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_ModifySettingAction             {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_SelfRegModuleAction           {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_TypeLibraryAction             {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_ExecuteProgram                  {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_BindImageAction               {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_RemoveIniAction               {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_MIMEInfoAction                {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_FontInfoAction                {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_PublishComponentAction        {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_FileAction                      {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_MoveFileAction                {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_CopyFileAction                  {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_DuplicateFileAction           {Invoke}             {ActionID, Caption, Description, Direction...}
+CIM_RemoveFileAction                {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_RemoveFileAction              {Invoke}             {ActionID, Caption, Description, Direction...}
+Win32_ProductResource               {}                   {Product, Resource}
+Win32_FolderRedirectionHealth       {}                   {HealthStatus, LastSuccessfulSyncTime, LastSyncStatus, LastSyncTime...}
+Win32_MountPoint                    {}                   {Directory, Volume}
+CIM_Statistics                      {}                   {Element, Stats}
+CIM_ErrorCountersForDevice          {}                   {Element, Stats}
+Msft_Providers                      {Suspend, Resume,... {HostingGroup, HostingSpecification, HostProcessIdentifier, Locale...}
+Win32_UserProfile                   {ChangeOwner}        {AppDataRoaming, Contacts, Desktop, Documents...}
+CIM_RelatedStatistics               {}                   {RelatedStats, Stats}
+CIM_Export                          {}                   {Directory, ExportedDirectoryName, LocalFS}
+Win32_RoamingProfileMachineConfi... {}                   {AddAdminGroupToRUPEnabled, AllowCrossForestUserPolicy, BackgroundUploadParams, DeleteProfilesOlderDays...}
+Win32_ManagedSystemElementResource  {}                   {}
+Win32_SoftwareElementResource       {}                   {Element, Setting}
+CIM_FRUPhysicalElements             {}                   {Component, FRU}
+CIM_ParticipatesInSet               {}                   {Element, Set}
+CIM_FromDirectoryAction             {}                   {FileName, SourceDirectory}
+Win32_SID                           {}                   {AccountName, BinaryRepresentation, ReferencedDomainName, SID...}
+CIM_ElementCapacity                 {}                   {Capacity, Element}
+Win32_ActionCheck                   {}                   {Action, Check}
+CIM_ElementSetting                  {}                   {Element, Setting}
+Win32_UserDesktop                   {}                   {Element, Setting}
+CIM_MonitorSetting                  {}                   {Element, Setting}
+Win32_DeviceSettings                {}                   {Element, Setting}
+Win32_PrinterSetting                {}                   {Element, Setting}
+Win32_NetworkAdapterSetting         {}                   {Element, Setting}
+Win32_SerialPortSetting             {}                   {Element, Setting}
+Win32_SystemSetting                 {}                   {Element, Setting}
+Win32_SystemProgramGroups           {}                   {Element, Setting}
+Win32_SystemBootConfiguration       {}                   {Element, Setting}
+Win32_SystemTimeZone                {}                   {Element, Setting}
+Win32_SystemDesktop                 {}                   {Element, Setting}
+Win32_ClassicCOMClassSettings       {}                   {Element, Setting}
+Win32_VolumeQuota                   {}                   {Element, Setting}
+Win32_WMIElementSetting             {}                   {Element, Setting}
+Win32_COMApplicationSettings        {}                   {Element, Setting}
+CIM_VideoSetting                    {}                   {Element, Setting}
+Win32_VideoSettings                 {}                   {Element, Setting}
+Win32_SecuritySettingOfObject       {}                   {Element, Setting}
+Win32_SecuritySettingOfLogicalShare {}                   {Element, Setting}
+Win32_SecuritySettingOfLogicalFile  {}                   {Element, Setting}
+Win32_PageFileElementSetting        {}                   {Element, Setting}
+Win32_OperatingSystemAutochkSetting {}                   {Element, Setting}
+Win32_VolumeQuotaSetting            {}                   {Element, Setting}
+CIM_ToDirectorySpecification        {}                   {DestinationDirectory, FileName}
+CIM_ProductSoftwareFeatures         {}                   {Component, Product}
+Win32_ProductSoftwareFeatures       {}                   {Component, Product}
+Win32_ImplementedCategory           {}                   {Category, Component}
+Win32_RoamingProfileUserConfigur... {}                   {DirectoriesToSyncAtLogonLogoff, ExcludedProfileDirs, IsConfiguredByWMI}
+CIM_InstalledSoftwareElement        {}                   {Software, System}
+Win32_InstalledSoftwareElement      {}                   {Software, System}
+Win32_SoftwareFeatureCheck          {}                   {Check, Element}
+Win32_LUIDandAttributes             {}                   {Attributes, LUID}
+Win32_VolumeUserQuota               {}                   {Account, DiskSpaceUsed, Limit, Status...}
+Msft_WmiProvider_Counters           {}                   {ProviderOperation_AccessCheck, ProviderOperation_CancelQuery, ProviderOperation_CreateClassEnumAsync, ProviderOperation_...
+Win32_LUID                          {}                   {HighPart, LowPart}
+CIM_Check                           {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_DiskSpaceCheck                  {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_DirectorySpecification          {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_DirectorySpecification        {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_SoftwareElementCondition      {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_ODBCDriverSpecification       {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_MemoryCheck                     {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_ServiceSpecification          {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_FileSpecification               {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_FileSpecification             {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_IniFileSpecification          {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_SoftwareElementVersionCheck     {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_SettingCheck                    {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_LaunchCondition               {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_ODBCDataSourceSpecification   {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_ODBCTranslatorSpecification   {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_ProgIDSpecification           {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_SwapSpaceCheck                  {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_EnvironmentSpecification      {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_ReserveCost                   {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_VersionCompatibilityCheck       {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_OSVersionCheck                  {Invoke}             {Caption, CheckID, CheckMode, Description...}
+Win32_Condition                     {Invoke}             {Caption, CheckID, CheckMode, Description...}
+CIM_ProductFRU                      {}                   {FRU, Product}
+Win32_ShadowStorage                 {Create}             {AllocatedSpace, DiffVolume, MaxSpace, UsedSpace...}
+Win32_DCOMApplicationAccessAllow... {}                   {Element, Setting}
+StdRegProv                          {CreateKey, Delet... {}
+CIM_FRUIncludesProduct              {}                   {Component, FRU}
+Win32_FolderRedirection             {}                   {ContentsMoved, ContentsMovedOnPolicyRemoval, ContentsRenamedInLocalCache, ExclusiveRightsGranted...}
+CIM_ProductPhysicalElements         {}                   {Component, Product}
+CIM_CollectedMSEs                   {}                   {Collection, Member}
+Win32_NamedJobObjectProcess         {}                   {Collection, Member}
+CIM_PhysicalElementLocation         {}                   {Element, PhysicalLocation}
+Win32_TokenPrivileges               {}                   {PrivilegeCount, Privileges}
+CIM_CollectionOfMSEs                {}                   {Caption, CollectionID, Description}
+Win32_NamedJobObject                {}                   {Caption, CollectionID, Description, BasicUIRestrictions}
+CIM_FromDirectorySpecification      {}                   {FileName, SourceDirectory}
+Win32_PnPDevice                     {}                   {SameElement, SystemElement}
+CIM_StorageError                    {}                   {DeviceCreationClassName, DeviceID, EndingAddress, StartingAddress...}
+Win32_ServiceSpecificationService   {}                   {Check, Element}
+Win32_InstalledWin32Program         {}                   {Language, MsiPackageCode, MsiProductCode, Name...}
+Win32_ShareToDirectory              {}                   {Share, SharedElement}
+Win32_SettingCheck                  {}                   {Check, Setting}
+Win32_PatchFile                     {}                   {Check, Setting}
+Win32_ODBCDriverAttribute           {}                   {Check, Setting}
+Win32_ODBCDataSourceAttribute       {}                   {Check, Setting}
+Win32_ClientApplicationSetting      {}                   {Application, Client}
+CIM_ElementConfiguration            {}                   {Configuration, Element}
+Win32_RoamingUserHealthConfigura... {}                   {HealthStatusForTempProfiles, LastProfileDownloadIntervalCautionInHours, LastProfileDownloadIntervalUnhealthyInHours, Las...
+CIM_ReplacementSet                  {}                   {Description, Name}
+Win32_UserStateConfigurationCont... {}                   {FolderRedirection, OfflineFiles, RoamingUserProfile}
+CIM_DirectorySpecificationFile      {}                   {DirectorySpecification, FileSpecification}
+CIM_SettingContext                  {}                   {Context, Setting}
+Win32_SecuritySettingOwner          {}                   {Owner, SecuritySetting}
+Win32_LogicalFileOwner              {}                   {Owner, SecuritySetting}
+CIM_ManagedSystemElement            {}                   {Caption, Description, InstallDate, Name...}
+CIM_PhysicalElement                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_PhysicalComponent               {}                   {Caption, Description, InstallDate, Name...}
+CIM_PhysicalMedia                   {}                   {Caption, Description, InstallDate, Name...}
+Win32_PhysicalMedia                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_Chip                            {}                   {Caption, Description, InstallDate, Name...}
+CIM_PhysicalMemory                  {}                   {Caption, Description, InstallDate, Name...}
+Win32_PhysicalMemory                {}                   {Caption, Description, InstallDate, Name...}
+Win32_OnBoardDevice                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_PhysicalPackage                 {IsCompatible}       {Caption, Description, InstallDate, Name...}
+CIM_Card                            {IsCompatible}       {Caption, Description, InstallDate, Name...}
+Win32_BaseBoard                     {IsCompatible}       {Caption, Description, InstallDate, Name...}
+CIM_PhysicalFrame                   {IsCompatible}       {Caption, Description, InstallDate, Name...}
+CIM_Rack                            {IsCompatible}       {Caption, Description, InstallDate, Name...}
+CIM_Chassis                         {IsCompatible}       {Caption, Description, InstallDate, Name...}
+Win32_SystemEnclosure               {IsCompatible}       {Caption, Description, InstallDate, Name...}
+Win32_PhysicalMemoryArray           {IsCompatible}       {Caption, Description, InstallDate, Name...}
+CIM_PhysicalConnector               {}                   {Caption, Description, InstallDate, Name...}
+CIM_Slot                            {}                   {Caption, Description, InstallDate, Name...}
+Win32_SystemSlot                    {}                   {Caption, Description, InstallDate, Name...}
+Win32_PortConnector                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_PhysicalLink                    {}                   {Caption, Description, InstallDate, Name...}
+CIM_LogicalElement                  {}                   {Caption, Description, InstallDate, Name...}
+CIM_Thread                          {}                   {Caption, Description, InstallDate, Name...}
+Win32_Thread                        {}                   {Caption, Description, InstallDate, Name...}
+Win32_COMApplication                {}                   {Caption, Description, InstallDate, Name...}
+Win32_DCOMApplication               {}                   {Caption, Description, InstallDate, Name...}
+CIM_Job                             {}                   {Caption, Description, InstallDate, Name...}
+Win32_ScheduledJob                  {Create, Delete}     {Caption, Description, InstallDate, Name...}
+Win32_PrintJob                      {Pause, Resume}      {Caption, Description, InstallDate, Name...}
+Win32_ServerSession                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_System                          {}                   {Caption, Description, InstallDate, Name...}
+CIM_ComputerSystem                  {}                   {Caption, Description, InstallDate, Name...}
+CIM_UnitaryComputerSystem           {SetPowerState}      {Caption, Description, InstallDate, Name...}
+Win32_ComputerSystem                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_ApplicationSystem               {}                   {Caption, Description, InstallDate, Name...}
+Win32_NTDomain                      {}                   {Caption, Description, InstallDate, Name...}
+CIM_SoftwareFeature                 {}                   {Caption, Description, InstallDate, Name...}
+Win32_SoftwareFeature               {Reinstall, Confi... {Caption, Description, InstallDate, Name...}
+CIM_VideoBIOSFeature                {}                   {Caption, Description, InstallDate, Name...}
+CIM_BIOSFeature                     {}                   {Caption, Description, InstallDate, Name...}
+CIM_LogicalDevice                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Sensor                          {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_BinarySensor                    {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_MultiStateSensor                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_DiscreteSensor                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_NumericSensor                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_TemperatureSensor               {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_TemperatureProbe              {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Tachometer                      {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_VoltageSensor                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_VoltageProbe                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_CurrentSensor                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_CurrentProbe                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_Bus                           {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_UserDevice                      {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Keyboard                        {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_Keyboard                      {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Display                         {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_FlatPanel                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_DesktopMonitor                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_DesktopMonitor                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_PointingDevice                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_PointingDevice                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_USBDevice                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_USBHub                          {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_USBHub                        {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_NetworkAdapter                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapter                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_AlarmDevice                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Battery                         {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_Battery                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_PortableBattery               {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_SoundDevice                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_MotherboardDevice             {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_PowerSupply                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_UninterruptiblePowerSupply      {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_MediaAccessDevice               {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_DiskDrive                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_DiskDrive                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_DisketteDrive                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_TapeDrive                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_TapeDrive                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_MagnetoOpticalDrive             {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_CDROMDrive                      {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_CDROMDrive                    {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_WORMDrive                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Scanner                         {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_PnPEntity                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_PotsModem                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_POTSModem                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_CoolingDevice                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_HeatPipe                        {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_HeatPipe                      {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Refrigeration                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_Refrigeration                 {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Fan                             {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_Fan                           {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Printer                         {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_Printer                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Controller                      {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_ManagementController            {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_SCSIController                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_SCSIController                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_InfraredController              {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_InfraredDevice                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_PCIController                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_PCMCIAController                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_PCMCIAController              {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_VideoController                 {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_PCVideoController               {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_VideoController               {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_USBController                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_USBController                 {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_SerialController                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_SerialPort                    {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_ParallelController              {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_ParallelPort                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_IDEController                 {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_1394Controller                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_StorageExtent                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Memory                          {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_VolatileStorage                 {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_NonVolatileStorage              {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_CacheMemory                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_CacheMemory                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_StorageVolume                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_Volume                        {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_PhysicalExtent                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_SMBIOSMemory                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_MemoryArray                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_MemoryDevice                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_ProtectedSpaceExtent            {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_AggregatePSExtent               {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_AggregatePExtent                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_VolumeSet                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_LogicalDisk                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_LogicalDisk                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_MappedLogicalDisk             {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_DiskPartition                   {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_DiskPartition                 {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+CIM_Processor                       {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_Processor                     {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_OptionalFeature               {}                   {Caption, Description, InstallDate, Name...}
+Win32_DfsNode                       {Create}             {Caption, Description, InstallDate, Name...}
+Win32_ComponentCategory             {}                   {Caption, Description, InstallDate, Name...}
+Win32_ProgramGroupOrItem            {}                   {Caption, Description, InstallDate, Name...}
+Win32_LogicalProgramGroupItem       {}                   {Caption, Description, InstallDate, Name...}
+Win32_LogicalProgramGroup           {}                   {Caption, Description, InstallDate, Name...}
+Win32_NetworkConnection             {}                   {Caption, Description, InstallDate, Name...}
+Win32_COMClass                      {}                   {Caption, Description, InstallDate, Name...}
+Win32_ClassicCOMClass               {}                   {Caption, Description, InstallDate, Name...}
+Win32_Account                       {}                   {Caption, Description, InstallDate, Name...}
+Win32_UserAccount                   {Rename}             {Caption, Description, InstallDate, Name...}
+Win32_Group                         {Rename}             {Caption, Description, InstallDate, Name...}
+Win32_SystemAccount                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_Service                         {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_BaseService                   {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_SystemDriver                  {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_Service                       {StartService, St... {Caption, Description, InstallDate, Name...}
+CIM_BootService                     {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_PnPSignedDriver               {StartService, St... {Caption, Description, InstallDate, Name...}
+CIM_ClusteringService               {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_ApplicationService            {StartService, St... {Caption, Description, InstallDate, Name...}
+Win32_PrinterDriver                 {StartService, St... {Caption, Description, InstallDate, Name...}
+CIM_ServiceAccessPoint              {}                   {Caption, Description, InstallDate, Name...}
+Win32_TCPIPPrinterPort              {}                   {Caption, Description, InstallDate, Name...}
+CIM_ClusteringSAP                   {}                   {Caption, Description, InstallDate, Name...}
+CIM_BootSAP                         {}                   {Caption, Description, InstallDate, Name...}
+Win32_CommandLineAccess             {}                   {Caption, Description, InstallDate, Name...}
+CIM_SystemResource                  {}                   {Caption, Description, InstallDate, Name...}
+CIM_MemoryMappedIO                  {}                   {Caption, Description, InstallDate, Name...}
+Win32_SystemMemoryResource          {}                   {Caption, Description, InstallDate, Name...}
+Win32_PortResource                  {}                   {Caption, Description, InstallDate, Name...}
+Win32_DeviceMemoryAddress           {}                   {Caption, Description, InstallDate, Name...}
+CIM_IRQ                             {}                   {Caption, Description, InstallDate, Name...}
+Win32_IRQResource                   {}                   {Caption, Description, InstallDate, Name...}
+Win32_Environment                   {}                   {Caption, Description, InstallDate, Name...}
+CIM_DMA                             {}                   {Caption, Description, InstallDate, Name...}
+Win32_DMAChannel                    {}                   {Caption, Description, InstallDate, Name...}
+Win32_Share                         {Create, SetShare... {Caption, Description, InstallDate, Name...}
+Win32_ClusterShare                  {Create, SetShare... {Caption, Description, InstallDate, Name...}
+CIM_FileSystem                      {}                   {Caption, Description, InstallDate, Name...}
+CIM_RemoteFileSystem                {}                   {Caption, Description, InstallDate, Name...}
+CIM_NFS                             {}                   {Caption, Description, InstallDate, Name...}
+CIM_LocalFileSystem                 {}                   {Caption, Description, InstallDate, Name...}
+Win32_NetworkProtocol               {}                   {Caption, Description, InstallDate, Name...}
+Win32_ShadowProvider                {}                   {Caption, Description, InstallDate, Name...}
+CIM_RedundancyGroup                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_ExtraCapacityGroup              {}                   {Caption, Description, InstallDate, Name...}
+CIM_StorageRedundancyGroup          {}                   {Caption, Description, InstallDate, Name...}
+CIM_SpareGroup                      {}                   {Caption, Description, InstallDate, Name...}
+Win32_QuickFixEngineering           {}                   {Caption, Description, InstallDate, Name...}
+Win32_IP4RouteTable                 {}                   {Caption, Description, InstallDate, Name...}
+Win32_ShadowCopy                    {Create, Revert}     {Caption, Description, InstallDate, Name...}
+Win32_LoadOrderGroup                {}                   {Caption, Description, InstallDate, Name...}
+CIM_Process                         {}                   {Caption, Description, InstallDate, Name...}
+Win32_Process                       {Create, Terminat... {Caption, Description, InstallDate, Name...}
+Win32_Session                       {}                   {Caption, Description, InstallDate, Name...}
+Win32_LogonSession                  {}                   {Caption, Description, InstallDate, Name...}
+Win32_ServerConnection              {}                   {Caption, Description, InstallDate, Name...}
+CIM_JobDestination                  {}                   {Caption, Description, InstallDate, Name...}
+Win32_DfsTarget                     {}                   {Caption, Description, InstallDate, Name...}
+Win32_NetworkClient                 {}                   {Caption, Description, InstallDate, Name...}
+Win32_PageFileUsage                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_OperatingSystem                 {Reboot, Shutdown}   {Caption, Description, InstallDate, Name...}
+Win32_OperatingSystem               {Reboot, Shutdown... {Caption, Description, InstallDate, Name...}
+CIM_LogicalFile                     {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+CIM_Directory                       {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+Win32_Directory                     {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+CIM_DeviceFile                      {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+CIM_DataFile                        {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+Win32_ShortcutFile                  {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+Win32_CodecFile                     {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+Win32_NTEventlogFile                {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+Win32_PageFile                      {TakeOwnerShip, C... {Caption, Description, InstallDate, Name...}
+Win32_IP4PersistedRouteTable        {}                   {Caption, Description, InstallDate, Name...}
+Win32_Registry                      {}                   {Caption, Description, InstallDate, Name...}
+CIM_SoftwareElement                 {}                   {Caption, Description, InstallDate, Name...}
+CIM_BIOSElement                     {}                   {Caption, Description, InstallDate, Name...}
+Win32_BIOS                          {}                   {Caption, Description, InstallDate, Name...}
+Win32_SoftwareElement               {}                   {Caption, Description, InstallDate, Name...}
+CIM_VideoBIOSElement                {}                   {Caption, Description, InstallDate, Name...}
+NTEventlogProviderConfig            {}                   {LastBootUpTime}
+Win32_ShortcutSAP                   {}                   {Action, Element}
+Win32_MethodParameterClass          {}                   {}
+Win32_ProcessStartup                {}                   {CreateFlags, EnvironmentVariables, ErrorMode, FillAttribute...}
+Win32_PingStatus                    {}                   {Address, BufferSize, NoFragmentation, PrimaryAddressResolutionStatus...}
+CIM_ProductSupport                  {}                   {Product, Support}
+CIM_AdjacentSlots                   {}                   {DistanceBetweenSlots, SharedSlots, SlotA, SlotB}
+CIM_SoftwareElementChecks           {}                   {Check, Element, Phase}
+Win32_SoftwareElementCheck          {}                   {Check, Element, Phase}
+Win32_ODBCDriverSoftwareElement     {}                   {Check, Element, Phase}
+CIM_Component                       {}                   {GroupComponent, PartComponent}
+CIM_SystemComponent                 {}                   {GroupComponent, PartComponent}
+Win32_SystemServices                {}                   {GroupComponent, PartComponent}
+Win32_SystemNetworkConnections      {}                   {GroupComponent, PartComponent}
+CIM_HostedFileSystem                {}                   {GroupComponent, PartComponent}
+CIM_ComputerSystemResource          {}                   {GroupComponent, PartComponent}
+Win32_SystemResources               {}                   {GroupComponent, PartComponent}
+CIM_ComputerSystemMappedIO          {}                   {GroupComponent, PartComponent}
+CIM_ComputerSystemDMA               {}                   {GroupComponent, PartComponent}
+CIM_ComputerSystemIRQ               {}                   {GroupComponent, PartComponent}
+Win32_SystemBIOS                    {}                   {GroupComponent, PartComponent}
+Win32_SystemLoadOrderGroups         {}                   {GroupComponent, PartComponent}
+Win32_SystemUsers                   {}                   {GroupComponent, PartComponent}
+CIM_InstalledOS                     {}                   {GroupComponent, PartComponent, PrimaryOS}
+Win32_SystemOperatingSystem         {}                   {GroupComponent, PartComponent, PrimaryOS}
+CIM_SystemDevice                    {}                   {GroupComponent, PartComponent}
+Win32_SystemDevices                 {}                   {GroupComponent, PartComponent}
+Win32_ComputerSystemProcessor       {}                   {GroupComponent, PartComponent}
+Win32_SystemPartitions              {}                   {GroupComponent, PartComponent}
+Win32_SystemSystemDriver            {}                   {GroupComponent, PartComponent}
+CIM_ApplicationSystemSoftwareFea... {}                   {GroupComponent, PartComponent}
+Win32_SystemProcesses               {}                   {GroupComponent, PartComponent}
+CIM_LinkHasConnector                {}                   {GroupComponent, PartComponent}
+CIM_CollectionOfSensors             {}                   {GroupComponent, PartComponent}
+CIM_ProcessThread                   {}                   {GroupComponent, PartComponent}
+Win32_COMApplicationClasses         {}                   {GroupComponent, PartComponent}
+Win32_ClassicCOMApplicationClasses  {}                   {GroupComponent, PartComponent}
+CIM_DirectoryContainsFile           {}                   {GroupComponent, PartComponent}
+CIM_FileStorage                     {}                   {GroupComponent, PartComponent}
+Win32_UserInDomain                  {}                   {GroupComponent, PartComponent}
+Win32_LoadOrderGroupServiceMembers  {}                   {GroupComponent, PartComponent}
+CIM_OperatingSystemSoftwareFeature  {}                   {GroupComponent, PartComponent}
+CIM_RedundancyComponent             {}                   {GroupComponent, PartComponent}
+CIM_AggregateRedundancyComponent    {}                   {GroupComponent, PartComponent}
+CIM_PExtentRedundancyComponent      {}                   {GroupComponent, PartComponent}
+Win32_LogicalDiskRootDirectory      {}                   {GroupComponent, PartComponent}
+CIM_SoftwareFeatureSoftwareElements {}                   {GroupComponent, PartComponent}
+Win32_SoftwareFeatureSoftwareEle... {}                   {GroupComponent, PartComponent}
+CIM_VideoBIOSFeatureVideoBIOSEle... {}                   {GroupComponent, PartComponent}
+CIM_BIOSFeatureBIOSElements         {}                   {GroupComponent, PartComponent}
+Win32_MemoryDeviceArray             {}                   {GroupComponent, PartComponent}
+Win32_GroupInDomain                 {}                   {GroupComponent, PartComponent}
+CIM_OSProcess                       {}                   {GroupComponent, PartComponent}
+Win32_GroupUser                     {}                   {GroupComponent, PartComponent}
+Win32_ProgramGroupContents          {}                   {GroupComponent, PartComponent}
+Win32_SubDirectory                  {}                   {GroupComponent, PartComponent}
+CIM_Container                       {}                   {GroupComponent, PartComponent, LocationWithinContainer}
+CIM_ConnectorOnPackage              {}                   {GroupComponent, PartComponent, LocationWithinContainer}
+CIM_PackageInChassis                {}                   {GroupComponent, PartComponent, LocationWithinContainer}
+CIM_ChassisInRack                   {}                   {GroupComponent, PartComponent, LocationWithinContainer, BottomU}
+CIM_PackagedComponent               {}                   {GroupComponent, PartComponent, LocationWithinContainer}
+CIM_MemoryOnCard                    {}                   {GroupComponent, PartComponent, LocationWithinContainer}
+Win32_PhysicalMemoryLocation        {}                   {GroupComponent, PartComponent, LocationWithinContainer}
+CIM_CardOnCard                      {}                   {GroupComponent, PartComponent, LocationWithinContainer, MountOrSlotDescription}
+Win32_FolderRedirectionUserConfi... {}                   {AppDataRoaming, Contacts, Desktop, Documents...}
+Win32_Reliability                   {}                   {}
+Win32_ReliabilityStabilityMetrics   {GetRecordCount}     {EndMeasurementDate, RelID, StartMeasurementDate, SystemStabilityIndex...}
+Win32_ReliabilityRecords            {GetRecordCount}     {ComputerName, EventIdentifier, InsertionStrings, Logfile...}
+Win32_InstalledProgramFramework     {}                   {FrameworkName, FrameworkPublisher, FrameworkVersion, FrameworkVersionActual...}
+Win32_NTLogEventLog                 {}                   {Log, Record}
+Win32_DiskQuota                     {}                   {DiskSpaceUsed, Limit, QuotaVolume, Status...}
+Win32_ComClassAutoEmulator          {}                   {NewVersion, OldVersion}
+Win32_FolderRedirectionHealthCon... {}                   {LastSyncDurationCautionInHours, LastSyncDurationUnhealthyInHours}
+Win32_ComClassEmulator              {}                   {NewVersion, OldVersion}
+Win32_SoftwareFeatureAction         {}                   {Action, Element}
+CIM_StatisticalInformation          {}                   {Caption, Description, Name}
+Win32_NamedJobObjectActgInfo        {}                   {Caption, Description, Name, ActiveProcesses...}
+CIM_DeviceErrorCounts               {ResetCounter}       {Caption, Description, Name, CriticalErrorCount...}
+Win32_Perf                          {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData                   {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData             {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_SecuritySettingGroup          {}                   {Group, SecuritySetting}
+Win32_LogicalFileGroup              {}                   {Group, SecuritySetting}
+Win32_DCOMApplicationLaunchAllow... {}                   {Element, Setting}
+Win32_SecuritySettingAuditing       {}                   {AuditedAccessMask, GuidInheritedObjectType, GuidObjectType, Inheritance...}
+Win32_LogicalFileAuditing           {}                   {AuditedAccessMask, GuidInheritedObjectType, GuidObjectType, Inheritance...}
+Win32_LogicalShareAuditing          {}                   {AuditedAccessMask, GuidInheritedObjectType, GuidObjectType, Inheritance...}
+SoftwareLicensingProduct            {UninstallProduct... {ADActivationCsvlkPid, ADActivationCsvlkSkuId, ADActivationObjectDN, ADActivationObjectName...}
+Win32_PnPDeviceProperty             {}                   {DeviceID, key, KeyName, Type}
+Win32_PnPDevicePropertyString       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyReal32Array  {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyReal64       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyUint16       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySint16Array  {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySint64       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyUint8        {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySint8        {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySecurityD... {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyReal32       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySint32       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyStringArray  {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyUint32       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyUint64       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyBoolean      {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyUint16Array  {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyBinary       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySint32Array  {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySint16       {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyReal64Array  {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyBooleanArray {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyUint32Array  {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertyDateTime     {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySecurityD... {}                   {DeviceID, key, KeyName, Type...}
+Win32_PnPDevicePropertySint8Array   {}                   {DeviceID, key, KeyName, Type...}
+CIM_SoftwareElementActions          {}                   {Action, Element}
+Win32_SoftwareElementAction         {}                   {Action, Element}
+CIM_Dependency                      {}                   {Antecedent, Dependent}
+CIM_ServiceAccessBySAP              {}                   {Antecedent, Dependent}
+CIM_BootServiceAccessBySAP          {}                   {Antecedent, Dependent}
+Win32_ApplicationCommandLine        {}                   {Antecedent, Dependent}
+CIM_ClusterServiceAccessBySAP       {}                   {Antecedent, Dependent}
+Win32_SubSession                    {}                   {Antecedent, Dependent}
+Win32_ShadowVolumeSupport           {}                   {Antecedent, Dependent}
+CIM_SAPSAPDependency                {}                   {Antecedent, Dependent}
+CIM_PackageTempSensor               {}                   {Antecedent, Dependent}
+CIM_JobDestinationJobs              {}                   {Antecedent, Dependent}
+CIM_BIOSLoadedInNV                  {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+CIM_AssociatedCooling               {}                   {Antecedent, Dependent}
+Win32_DeviceBus                     {}                   {Antecedent, Dependent}
+Win32_SessionConnection             {}                   {Antecedent, Dependent}
+Win32_ShadowFor                     {}                   {Antecedent, Dependent}
+Win32_LogonSessionMappedDisk        {}                   {Antecedent, Dependent}
+CIM_ConnectedTo                     {}                   {Antecedent, Dependent}
+CIM_SlotInSlot                      {}                   {Antecedent, Dependent}
+Win32_PrinterShare                  {}                   {Antecedent, Dependent}
+CIM_BootOSFromFS                    {}                   {Antecedent, Dependent}
+Win32_PnPSignedDriverCIMDataFile    {}                   {Antecedent, Dependent}
+CIM_AssociatedAlarm                 {}                   {Antecedent, Dependent}
+CIM_ElementsLinked                  {}                   {Antecedent, Dependent}
+Win32_ConnectionShare               {}                   {Antecedent, Dependent}
+Win32_LoadOrderGroupServiceDepen... {}                   {Antecedent, Dependent}
+CIM_DeviceSAPImplementation         {}                   {Antecedent, Dependent}
+CIM_AssociatedSensor                {}                   {Antecedent, Dependent}
+CIM_AssociatedSupplyCurrentSensor   {}                   {Antecedent, Dependent, MonitoringRange}
+CIM_AssociatedSupplyVoltageSensor   {}                   {Antecedent, Dependent, MonitoringRange}
+CIM_Mount                           {}                   {Antecedent, Dependent}
+CIM_ComputerSystemPackage           {}                   {Antecedent, Dependent}
+CIM_PackageCooling                  {}                   {Antecedent, Dependent}
+CIM_ProcessExecutable               {}                   {Antecedent, Dependent, BaseAddress, GlobalProcessCount...}
+CIM_HostedService                   {}                   {Antecedent, Dependent}
+CIM_HostedBootService               {}                   {Antecedent, Dependent}
+CIM_DeviceAccessedByFile            {}                   {Antecedent, Dependent}
+Win32_SessionResource               {}                   {Antecedent, Dependent}
+Win32_SessionProcess                {}                   {Antecedent, Dependent}
+CIM_AssociatedMemory                {}                   {Antecedent, Dependent}
+CIM_AssociatedProcessorMemory       {}                   {Antecedent, Dependent, BusSpeed}
+Win32_AssociatedProcessorMemory     {}                   {Antecedent, Dependent, BusSpeed}
+Win32_SoftwareFeatureParent         {}                   {Antecedent, Dependent}
+CIM_DeviceServiceImplementation     {}                   {Antecedent, Dependent}
+CIM_AssociatedBattery               {}                   {Antecedent, Dependent}
+Win32_ShadowOn                      {}                   {Antecedent, Dependent}
+Win32_PrinterDriverDll              {}                   {Antecedent, Dependent}
+CIM_PackageInSlot                   {}                   {Antecedent, Dependent}
+CIM_CardInSlot                      {}                   {Antecedent, Dependent}
+CIM_MemoryWithMedia                 {}                   {Antecedent, Dependent}
+CIM_ServiceServiceDependency        {}                   {Antecedent, Dependent, TypeOfDependency}
+Win32_DependentService              {}                   {Antecedent, Dependent, TypeOfDependency}
+CIM_BasedOn                         {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+CIM_LogicalDiskBasedOnPartition     {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+Win32_LogicalDiskToPartition        {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+CIM_LogicalDiskBasedOnVolumeSet     {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+CIM_PSExtentBasedOnPExtent          {}                   {Antecedent, Dependent, EndingAddress, StartingAddress}
+Win32_OperatingSystemQFE            {}                   {Antecedent, Dependent}
+Win32_LoggedOnUser                  {}                   {Antecedent, Dependent}
+CIM_RunningOS                       {}                   {Antecedent, Dependent}
+Win32_SystemDriverPNPEntity         {}                   {Antecedent, Dependent}
+CIM_SoftwareFeatureServiceImplem... {}                   {Antecedent, Dependent}
+CIM_ServiceSAPDependency            {}                   {Antecedent, Dependent}
+Win32_DfsNodeTarget                 {}                   {Antecedent, Dependent}
+Win32_CIMLogicalDeviceCIMDataFile   {}                   {Antecedent, Dependent, Purpose, PurposeDescription}
+CIM_DeviceConnection                {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed}
+CIM_ControlledBy                    {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+Win32_SCSIControllerDevice          {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+Win32_POTSModemToSerialPort         {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+Win32_USBControllerDevice           {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+CIM_SCSIInterface                   {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+Win32_PrinterController             {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+Win32_IDEControllerDevice           {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+CIM_SerialInterface                 {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+CIM_USBControllerHasHub             {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+Win32_ControllerHasHub              {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+Win32_1394ControllerDevice          {}                   {Antecedent, Dependent, NegotiatedDataWidth, NegotiatedSpeed...}
+Win32_DriverForDevice               {}                   {Antecedent, Dependent}
+Win32_LogicalProgramGroupItemDat... {}                   {Antecedent, Dependent}
+CIM_AllocatedResource               {}                   {Antecedent, Dependent}
+Win32_PNPAllocatedResource          {}                   {Antecedent, Dependent}
+CIM_SoftwareFeatureSAPImplementa... {}                   {Antecedent, Dependent}
+CIM_DeviceSoftware                  {}                   {Antecedent, Dependent, Purpose, PurposeDescription}
+CIM_Realizes                        {}                   {Antecedent, Dependent}
+CIM_RealizesPExtent                 {}                   {Antecedent, Dependent, StartingAddress}
+Win32_DiskDrivePhysicalMedia        {}                   {Antecedent, Dependent}
+CIM_RealizesDiskPartition           {}                   {Antecedent, Dependent, StartingAddress}
+Win32_MemoryDeviceLocation          {}                   {Antecedent, Dependent}
+Win32_MemoryArrayLocation           {}                   {Antecedent, Dependent}
+CIM_RealizesAggregatePExtent        {}                   {Antecedent, Dependent}
+Win32_ShadowBy                      {}                   {Antecedent, Dependent}
+Win32_AllocatedResource             {}                   {Antecedent, Dependent}
+CIM_HostedAccessPoint               {}                   {Antecedent, Dependent}
+CIM_HostedBootSAP                   {}                   {Antecedent, Dependent}
+CIM_ResidesOnExtent                 {}                   {Antecedent, Dependent}
+CIM_MediaPresent                    {}                   {Antecedent, Dependent}
+Win32_DiskDriveToDiskPartition      {}                   {Antecedent, Dependent}
+CIM_HostedJobDestination            {}                   {Antecedent, Dependent}
+Win32_LogicalProgramGroupDirectory  {}                   {Antecedent, Dependent}
+Win32_ShadowDiffVolumeSupport       {}                   {Antecedent, Dependent}
+CIM_PackageAlarm                    {}                   {Antecedent, Dependent}
+CIM_Docked                          {}                   {Antecedent, Dependent}
+CIM_Product                         {}                   {Caption, Description, IdentifyingNumber, Name...}
+Win32_Product                       {Install, Admin, ... {Caption, Description, IdentifyingNumber, Name...}
+Win32_ComputerSystemProduct         {}                   {Caption, Description, IdentifyingNumber, Name...}
+CIM_ActionSequence                  {}                   {Next, Prior}
+CIM_CollectedCollections            {}                   {Collection, CollectionInCollection}
+Win32_ProductCheck                  {}                   {Check, Product}
+SoftwareLicensingService            {InstallProductKe... {ClientMachineID, DiscoveredKeyManagementServiceMachineIpAddress, DiscoveredKeyManagementServiceMachineName, DiscoveredKe...
+Win32_NTLogEventUser                {}                   {Record, User}
+CIM_ProductParentChild              {}                   {Child, Parent}
+Win32_ProtocolBinding               {}                   {Antecedent, Dependent, Device}
+CIM_SupportAccess                   {}                   {CommunicationInfo, CommunicationMode, Description, Locale...}
+CIM_CollectionSetting               {}                   {Collection, Setting}
+Win32_NamedJobObjectLimit           {}                   {Collection, Setting}
+Win32_NamedJobObjectSecLimit        {}                   {Collection, Setting}
+Win32_InstalledStoreProgram         {}                   {Architecture, Language, Name, ProgramId...}
+Win32_NTLogEventComputer            {}                   {Computer, Record}
+Win32_TokenGroups                   {}                   {GroupCount, Groups}
+SoftwareLicensingTokenActivation... {Uninstall}          {AdditionalInfo, AuthorizationStatus, Description, ExpirationDate...}
+CIM_PhysicalCapacity                {}                   {Caption, Description, Name}
+CIM_MemoryCapacity                  {}                   {Caption, Description, Name, MaximumMemoryCapacity...}
+Win32_DefragAnalysis                {}                   {AverageFileSize, AverageFragmentsPerFile, AverageFreeSpacePerExtent, ClusterSize...}
+CIM_ProductProductDependency        {}                   {DependentProduct, RequiredProduct, TypeOfDependency}
+Win32_SIDandAttributes              {}                   {Attributes, SID}
+Win32_CheckCheck                    {}                   {Check, Location}
+CIM_CompatibleProduct               {}                   {CompatibilityDescription, CompatibleProduct, Product}
+Win32_RoamingProfileBackgroundUp... {}                   {Interval, SchedulingMethod, Time}
+CIM_ToDirectoryAction               {}                   {DestinationDirectory, FileName}
+CIM_ActsAsSpare                     {}                   {Group, HotStandby, Spare}
+Win32_RoamingProfileSlowLinkParams  {}                   {ConnectionTransferRate, TimeOut}
+Win32_SecuritySettingAccess         {}                   {AccessMask, GuidInheritedObjectType, GuidObjectType, Inheritance...}
+Win32_LogicalFileAccess             {}                   {AccessMask, GuidInheritedObjectType, GuidObjectType, Inheritance...}
+Win32_LogicalShareAccess            {}                   {AccessMask, GuidInheritedObjectType, GuidObjectType, Inheritance...}
+Win32_OfflineFilesHealth            {}                   {LastSuccessfulSyncTime, LastSyncStatus, LastSyncTime, OfflineAccessEnabled...}
+CIM_StorageDefect                   {}                   {Error, Extent}
+Win32_PerfFormattedData_AFDCount... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_AFDCounters_Mi... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ASPNET20... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ASPNET2050727_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ASPNET20... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ASPNET2050727_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ASPNET40... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ASPNET4030319_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ASPNET40... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ASPNET4030319_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ASPNET64... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ASPNET64205072... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ASPNET64... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ASPNET64205072... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ASPNET_A... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ASPNET_ASPNET     {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ASPNET_A... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ASPNET_ASPNETA... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_aspnetst... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_aspnetstate_AS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Authoriz... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_AuthorizationM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_BITS_BIT... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_BITS_BITSNetUt... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Bluet... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Bluet... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_DNS64... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Event... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Event... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_FileS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Gener... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_HTTPS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_HTTPS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_HTTPS... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Hyper... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Hyper... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPHTT... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPHTT... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_IPsec... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Netlogon {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Netwo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Pacer... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Pacer... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Packe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Packe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Packe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Packe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Packe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_PerPr... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_PerPr... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Physi... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Power... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Proce... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_RDMAA... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_ReFS     {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Remot... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Remot... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_SMBCl... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_SMBSe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_SMBSe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_SMBSe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Stora... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Stora... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Stora... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Stora... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Synch... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Synch... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Tered... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Tered... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Tered... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_Therm... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_WFP      {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_WFPCl... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_WFPRe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_WFPv4    {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_WFPv6    {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_WSMan... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_XHCIC... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_XHCII... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Counters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Counters_XHCIT... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_DdmCount... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_DdmCounterProv... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Distribu... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_DistributedRou... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ESENT_Da... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ESENT_Database    {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ESENT_Da... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ESENT_Database... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ESENT_Da... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ESENT_Database... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ESENT_Da... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ESENT_Database... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_FaxServi... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_FaxService_Fax... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_HvStats_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_HvStats_HyperV... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_HvStats_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_HvStats_HyperV... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_HvStats_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_HvStats_HyperV... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_HvStats_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_HvStats_HyperV... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_LocalSes... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_LocalSessionMa... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Lsa_Secu... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Lsa_SecurityPe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Lsa_Secu... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Lsa_SecuritySy... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_LSM_User... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_LSM_UserInputD... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_LSM_User... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_LSM_UserInputD... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Microsof... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MicrosoftWindo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_MSDTC_Di... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MSDTC_Distribu... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_MSDTCBri... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MSDTCBridge300... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_MSDTCBri... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_MSDTCBridge400... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETCLRDa... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETCLRData_NET... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETCLRNe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETCLRNetworki... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETCLRNe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETCLRNetworki... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETDataP... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETDataProvide... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETDataP... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETDataProvide... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETFrame... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETFramework_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETFrame... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETFramework_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETFrame... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETFramework_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETFrame... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETFramework_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETFrame... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETFramework_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETFrame... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETFramework_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETFrame... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETFramework_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETFrame... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETFramework_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_NETMemor... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_NETMemoryCache... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PeerName... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PeerNameResolu... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfDisk... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfDisk_Logic... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfDisk... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfDisk_Physi... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfNet_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfNet_Browser   {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfNet_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfNet_Redire... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfNet_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfNet_Server    {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfNet_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfNet_Server... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfOS_C... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfOS_Cache      {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfOS_M... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfOS_Memory     {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfOS_N... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfOS_NUMANod... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfOS_O... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfOS_Objects    {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfOS_P... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfOS_PagingFile {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfOS_P... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfOS_Processor  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfOS_S... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfOS_System     {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfProc... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfProc_JobOb... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfProc... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfProc_JobOb... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfProc... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfProc_Process  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PerfProc... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PerfProc_Thread   {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PowerMet... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PowerMeterCoun... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_PowerMet... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_PowerMeterCoun... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_rdyboost... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_rdyboost_Ready... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_RemoteAc... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_RemoteAccess_R... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_RemoteAc... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_RemoteAccess_R... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModel40... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModel40... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModel40... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModelEn... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModelOp... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_ServiceM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_ServiceModelSe... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_SMSvcHos... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_SMSvcHost3000_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_SMSvcHos... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_SMSvcHost4000_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Spooler_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Spooler_PrintQ... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_TapiSrv_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_TapiSrv_Telephony {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_ICMP  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_ICMP        {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_IC... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_ICMPv6      {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_IPv4  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_IPv4        {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_IPv6  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_IPv6        {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_NB... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NBTConne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkA... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkI... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_TCPv4 {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_TCPv4       {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_TCPv6 {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_TCPv6       {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_UDPv4 {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_UDPv4       {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_UDPv6 {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_UDPv6       {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_TCPIPCou... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_TCPIPCounters_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_TCPIPCou... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_TCPIPCounters_... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_UGathere... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_UGatherer_Sear... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_UGTHRSVC... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_UGTHRSVC_Searc... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_usbhub_USB  {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_usbhub_USB        {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_VidPerfP... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_VidPerfProvide... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WindowsM... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WindowsMediaPl... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WindowsW... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WindowsWorkflo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WindowsW... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WindowsWorkflo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WinNatCo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WinNatCounters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WinNatCo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WinNatCounters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WinNatCo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WinNatCounters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WinNatCo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WinNatCounters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WinNatCo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WinNatCounters... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Workflow... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WorkflowServic... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_WSearchI... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_WSearchIdxPi_S... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Windows\system32> Get-CimClass -ClassName "*adapter*"
+
+
+   NameSpace: ROOT/cimv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_NetworkAdapter                  {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapter                {SetPowerState, R... {Caption, Description, InstallDate, Name...}
+Win32_NetworkAdapterConfiguration   {EnableDHCP, Rene... {Caption, Description, SettingID, ArpAlwaysSourceRoute...}
+Win32_NetworkAdapterSetting         {}                   {Element, Setting}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_GPUPerfo... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_GPUPerformance... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfFormattedData_Tcpip_Ne... {}                   {Caption, Description, Name, Frequency_Object...}
+Win32_PerfRawData_Tcpip_NetworkA... {}                   {Caption, Description, Name, Frequency_Object...}
+
+
+PS C:\Windows\system32> Get-CimInstance win32_networkadapter
+
+DeviceID Name                                           AdapterType               ServiceName
+-------- ----                                           -----------               -----------
+0        Microsoft Kernel Debug Network Adapter                                   kdnic
+1        Realtek PCIe GbE Family Controller             Ethernet 802.3            rt640x64
+2        Realtek 8821AE Wireless LAN 802.11ac PCI-E NIC Ethernet 802.3            RTWlanE
+3        Bluetooth Device (Personal Area Network)       Ethernet 802.3            BthPan
+4        Microsoft Wi-Fi Direct Virtual Adapter         Ethernet 802.3            vwifimp
+5        Microsoft Wi-Fi Direct Virtual Adapter #2      Ethernet 802.3            vwifimp
+6        WAN Miniport (SSTP)                                                      RasSstp
+7        WAN Miniport (IKEv2)                                                     RasAgileVpn
+8        WAN Miniport (L2TP)                                                      Rasl2tp
+9        WAN Miniport (PPTP)                                                      PptpMiniport
+10       WAN Miniport (PPPOE)                                                     RasPppoe
+11       WAN Miniport (IP)                              Ethernet 802.3            NdisWan
+12       WAN Miniport (IPv6)                            Ethernet 802.3            NdisWan
+13       WAN Miniport (Network Monitor)                 Ethernet 802.3            NdisWan
+14       Kaspersky Security Data Escort Adapter         Ethernet 802.3            kltap
+15       TAP-Windows Adapter V9                         Ethernet 802.3            tap0901
+16       RAS Async Adapter                              Red de área extensa (WAN) AsyncMac
+18       Kaspersky Security Data Escort Adapter #2      Ethernet 802.3            kltap
+
+
+PS C:\Windows\system32> Get-CimInstance win32_networkadapter | select-objet IP
+select-objet : El término 'select-objet' no se reconoce como nombre de un cmdlet, función, archivo de script o programa 
+ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es 
+correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 40
++ Get-CimInstance win32_networkadapter | select-objet IP
++                                        ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (select-objet:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+select-objet : El término 'select-objet' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o,
+si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 40
++ Get-CimInstance win32_networkadapter | select-objet IP
++                                        ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (select-objet:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Windows\system32> Get-CimInstance win32_networkadapter | select-object IP
+
+IP
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Windows\system32> Get-CimInstance win32_networkadapterconfiguration
+
+ServiceName      DHCPEnabled                                            Index                                                  Description
+-----------      -----------                                            -----                                                  -----------
+kdnic            True                                                   0                                                      Microsoft Kernel Debug Network Adapter
+rt640x64         True                                                   1                                                      Realtek PCIe GbE Family Controller
+RTWlanE          True                                                   2                                                      Realtek 8821AE Wireless LAN 802.11ac PCI-E NIC
+BthPan           True                                                   3                                                      Bluetooth Device (Personal Area Network)
+vwifimp          True                                                   4                                                      Microsoft Wi-Fi Direct Virtual Adapter
+vwifimp          True                                                   5                                                      Microsoft Wi-Fi Direct Virtual Adapter
+RasSstp          False                                                  6                                                      WAN Miniport (SSTP)
+RasAgileVpn      False                                                  7                                                      WAN Miniport (IKEv2)
+Rasl2tp          False                                                  8                                                      WAN Miniport (L2TP)
+PptpMiniport     False                                                  9                                                      WAN Miniport (PPTP)
+RasPppoe         False                                                  10                                                     WAN Miniport (PPPOE)
+NdisWan          False                                                  11                                                     WAN Miniport (IP)
+NdisWan          False                                                  12                                                     WAN Miniport (IPv6)
+NdisWan          False                                                  13                                                     WAN Miniport (Network Monitor)
+kltap            True                                                   14                                                     Kaspersky Security Data Escort Adapter
+tap0901          True                                                   15                                                     TAP-Windows Adapter V9
+AsyncMac         False                                                  16                                                     RAS Async Adapter
+kltap            True                                                   18                                                     Kaspersky Security Data Escort Adapter
+
+
+PS C:\Windows\system32> Get-CimInstance win32_networkadapterconfiguration | Select-Object IP
+
+
+Description             : Microsoft Kernel Debug Network Adapter
+Index                   : 0
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Realtek PCIe GbE Family Controller
+Index                   : 1
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Realtek 8821AE Wireless LAN 802.11ac PCI-E NIC
+Index                   : 2
+IPAddress               : {192.168.0.9, fe80::1049:25e5:912a:29d4, 2800:484:a083:bdd0:cd17:405c:ccc3:a62f, 2800:484:a083:bdd0:1049:25e5:912a:29d4}
+IPConnectionMetric      : 55
+IPEnabled               : True
+IPFilterSecurityEnabled : False
+
+Description             : Bluetooth Device (Personal Area Network)
+Index                   : 3
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 4
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 5
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (SSTP)
+Index                   : 6
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IKEv2)
+Index                   : 7
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (L2TP)
+Index                   : 8
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (PPTP)
+Index                   : 9
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (PPPOE)
+Index                   : 10
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IP)
+Index                   : 11
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IPv6)
+Index                   : 12
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (Network Monitor)
+Index                   : 13
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Kaspersky Security Data Escort Adapter
+Index                   : 14
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : TAP-Windows Adapter V9
+Index                   : 15
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : RAS Async Adapter
+Index                   : 16
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Kaspersky Security Data Escort Adapter
+Index                   : 18
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+
+
+PS C:\Windows\system32> Get-wmiobject -Class
+>> ErrorTerminación(Get-WmiObject): "Falta un argumento para el parámetro 'Class'. Especifique un parámetro del tipo 'System.String' e inténtelo de nuevo."
+Get-WmiObject : Falta un argumento para el parámetro 'Class'. Especifique un parámetro del tipo 'System.String' e 
+inténtelo de nuevo.
+En línea: 1 Carácter: 15
++ Get-wmiobject -Class
++               ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-WmiObject], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+Get-WmiObject : Falta un argumento para el parámetro 'Class'. Especifique un parámetro del tipo 'System.String' e inténtelo de nuevo.
+En línea: 1 Carácter: 15
++ Get-wmiobject -Class
++               ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-WmiObject], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+
+PS C:\Windows\system32> ErrorTerminación(): "Se ha detenido la canalización."
+>> Get-wmiobject -Class "*service*"
+Get-wmiobject : Consulta no válida "select * from *service*"
+En línea: 1 Carácter: 1
++ Get-wmiobject -Class "*service*"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-WmiObject], ManagementException
+    + FullyQualifiedErrorId : GetWMIManagementException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+Get-wmiobject : Consulta no válida "select * from *service*"
+En línea: 1 Carácter: 1
++ Get-wmiobject -Class "*service*"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-WmiObject], ManagementException
+    + FullyQualifiedErrorId : GetWMIManagementException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+
+PS C:\Windows\system32> Get-wmiobject 
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Windows\system32> Get-wmiobject win32_service
+
+
+ExitCode  : 0
+Name      : AdobeARMservice
+ProcessId : 3372
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AJRouter
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : ALG
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AMD External Events Utility
+ProcessId : 2468
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppIDSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Appinfo
+ProcessId : 9268
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : AppReadiness
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AppXSvc
+ProcessId : 20568
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : aspnet_state
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AudioEndpointBuilder
+ProcessId : 2948
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Audiosrv
+ProcessId : 3312
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : avast
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : avastm
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AvastSecureBrowserElevationService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AVP20.0
+ProcessId : 3184
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AxInstSV
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : BDESVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : BEService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : BFE
+ProcessId : 3988
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BITS
+ProcessId : 3580
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BrokerInfrastructure
+ProcessId : 1168
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BTAGService
+ProcessId : 780
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BthAvctpSvc
+ProcessId : 1668
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : bthserv
+ProcessId : 1640
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : camsvc
+ProcessId : 2196
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CDPSvc
+ProcessId : 6916
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : CertPropSvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ClickToRunSvc
+ProcessId : 3048
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ClipSVC
+ProcessId : 9228
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : COMSysApp
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : CoreMessagingRegistrar
+ProcessId : 1648
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CryptSvc
+ProcessId : 2396
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DcomLaunch
+ProcessId : 1168
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : defragsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DeviceAssociationService
+ProcessId : 2000
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : DeviceInstall
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DevQueryBroker
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Dhcp
+ProcessId : 2172
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : diagnosticshub.standardcollector.service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : diagsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DiagTrack
+ProcessId : 3344
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DisplayEnhancementService
+ProcessId : 1824
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : DmEnrollmentSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : dmwappushservice
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Dnscache
+ProcessId : 3544
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Dolby DAX2 API Service
+ProcessId : 7188
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DoSvc
+ProcessId : 1916
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : dot3svc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DPS
+ProcessId : 2736
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DsmSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DsSvc
+ProcessId : 12968
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DusmSvc
+ProcessId : 3536
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Eaphost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : EFS
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : embeddedmode
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : EntAppSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : EpsonCustomerParticipation
+ProcessId : 3500
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EpsonScanSvc
+ProcessId : 4420
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ETDService
+ProcessId : 3528
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EventLog
+ProcessId : 1268
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EventSystem
+ProcessId : 2780
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Fax
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : fdPHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : FDResPub
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : fhsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : FLEXnet Licensing Service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : FontCache
+ProcessId : 2960
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : FontCache3.0.0.0
+ProcessId : 9932
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : FrameServer
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : GoogleChromeElevationService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gpsvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : GraphicsPerfSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gupdate
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : gupdatem
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : hidserv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : HvHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : icssvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : IKEEXT
+ProcessId : 3620
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : InstallService
+ProcessId : 19304
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : iphlpsvc
+ProcessId : 4464
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : IpxlatCfgSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : irmon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : KeyIso
+ProcessId : 752
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : klvssbridge64_20.0
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : kpm_launch_service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : KSDE4.0
+ProcessId : 8568
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : KtmRm
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : LanmanServer
+ProcessId : 4288
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LanmanWorkstation
+ProcessId : 736
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : lfsvc
+ProcessId : 3220
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LicenseManager
+ProcessId : 7316
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : lltdsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : lmhosts
+ProcessId : 11900
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LSM
+ProcessId : 1300
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LxpSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : MapsBroker
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : mpssvc
+ProcessId : 3988
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : MSDTC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : MSiSCSI
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : msiserver
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NaturalAuthentication
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NcaSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NcbService
+ProcessId : 1588
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : NcdAutoSetup
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : Netlogon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : Netman
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : netprofm
+ProcessId : 2580
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NetSetupSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NetTcpPortSharing
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NgcCtnrSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NgcSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NlaSvc
+ProcessId : 2448
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : nsi
+ProcessId : 1896
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : ose64
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : p2pimsvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : p2psvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PcaSvc
+ProcessId : 10392
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : perceptionsimulation
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : PerfHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PhoneSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : pla
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PlugPlay
+ProcessId : 1108
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PNRPAutoReg
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Windows\system32> Get-wmiobject win32_service | select-object status, startmode, systenmame
+
+status startmode systenmame
+------ --------- ----------
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Disabled
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Disabled
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Disabled
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Disabled
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Disabled
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Disabled
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Disabled
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Disabled
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Auto
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Manual
+OK     Auto
+
+
+PS C:\Windows\system32> Get-wmiobject win32_service | select-object status, startmode, systemname
+
+status startmode systemname
+------ --------- ----------
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Disabled  DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Manual    DESKTOP-7DD6IMI
+OK     Auto      DESKTOP-7DD6IMI
 
 PS C:\Windows\system32> Stop-Transcript
 **********************
