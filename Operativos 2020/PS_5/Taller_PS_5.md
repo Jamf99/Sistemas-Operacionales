@@ -5,8 +5,9 @@
 ##### 1. ¿Cuál clase puede emplearse para consultar la dirección IP de un adaptador de red? ¿Posee dicha clase algún método para liberar un préstamo de dirección (lease) DHCP?
 
 ```powershell
-
+Get-CimInstance win32_networkadapterconfiguration | Select-Object IP
 ```
+No posee un método para librerar un préstamo de dirección DHCP, pero si encuentra los adaptadores.
 
 ##### 2. Despliegue una lista de parches empleando WMI (Microsoft se refiere a los parches con el nombre **quick-fix engineering**). Es diferente el listado al que produce el cmdlet ``Get-Hotfix``?
 
@@ -18,7 +19,7 @@ Es el mismo listado que produce el cmdlet ``Get-Hotfix``.
 ##### 3. Empleando WMI, muestre una lista de servicios, que incluya su status actual, su modalidad de inicio, y las cuentas que emplean para hacer login.
 
 ```powershell
-
+Get-wmiobject win32_service | select-object status, startmode, systemname
 ```
 
 ##### 4. Empleando cmdlets de CIM, liste todas las clases del namespace ``SecurityCenter2``, que tengan **product** como parte del nombre.
